@@ -6,7 +6,7 @@
 
 body{
     font-size: 15px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #FFFFFF;
 }
 
@@ -15,11 +15,19 @@ body{
     margin: 0 auto;
 }
 
+.split1{
+    background-color: #34ADFF;
+    background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+}
+
 nav{
-    background-color: #2FAEFF;
     height:80px;
     font-size: 1.3rem;
     padding:10px;
+}
+
+nav a {
+    color: #FFFFFF;
 }
 
 .nav-items{
@@ -30,6 +38,10 @@ nav{
     float: left;
     margin: 10px;
     cursor: pointer;
+}
+
+.nav-items li:hover{
+    text-decoration: underline;
 }
 
 .icons-container{
@@ -43,7 +55,6 @@ nav{
     width:50px;
     height:50px;
     margin-left: 15px;
-    cursor: pointer;
 }
 
 .ham{
@@ -52,6 +63,7 @@ nav{
     display:none;
     margin-top:-5px;
     margin-left:5px;
+    cursor: pointer;
 }
 
 
@@ -60,36 +72,35 @@ main{
 
 }
 
-.home{
-    background-color: #2FAEFF;
-    height:500px;
+#home{
+    height:400px;
 }
 
 .headline{
     text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
+    font-size: 6rem;
     padding-top:50px;
+    font-family: 'Yellowtail', cursive;
 }
 
 .quote{
-    font-size:1.2rem;
-    font-family: serif;
-    font-style: italic;
+    font-size:1.8rem;
     text-align: center;
     padding-top:50px;
 }
 
-.portfolio{
+#portfolio{
+    height:500px;
+    background-color: #f2f2f2;
+}
+
+#about{
+    background-color: #013A6B;
+    background-image: -webkit-linear-gradient(45deg, #013A6B 45%, #004E95 45%);
     height:500px;
 }
 
-.about{
-    background-color: #17577F;
-    height:500px;
-}
-
-.contact{
+#contact{
     background-color: #0C2C40;
     height:500px;
 }
@@ -101,5 +112,15 @@ main{
     .ham{
         display:block;
     }
-
+    .headline{
+        padding-top:10px;
+        font-size: 4rem;
+    }
+    .quote{
+        font-size:1.4rem;
+        padding-top:40px;
+    }
+    #home{
+        height:300px;
+    }
 }
