@@ -46,20 +46,12 @@ nav{
     cursor: pointer;
 }
 
-.ham-container{
-    height:50px;
-    display:none;
-    margin-bottom: 25px;
-}
-
-.ham-area{
-    width:200px;
-    margin: 0 auto;
-    border: green 1px solid;
-}
-
 .ham{
     width:50px;
+    float: left;
+    display:none;
+    margin-top:-5px;
+    margin-left:5px;
 }
 
 
@@ -106,10 +98,7 @@ main{
     .nav-items{
         display:none;
     }
-    .icons-container{
-        margin: 0 auto;
-    }
-    .ham-container{
+    .ham{
         display:block;
     }
 
