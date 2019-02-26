@@ -1,7 +1,116 @@
-* {
+*{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {
+body{
     font-size: 15px;
+    font-family: sans-serif;
+    color: #FFFFFF;
+}
+
+.gutter{
+    width:80%;
+    margin: 0 auto;
+}
+
+nav{
+    background-color: #2FAEFF;
+    height:80px;
+    font-size: 1.3rem;
+    padding:10px;
+}
+
+.nav-items{
+    list-style: none;
+}
+
+.nav-items li{
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.icons-container{
+    height: 20px;
+    width: 200px;
+    margin-left: auto;
+}
+
+.icon{
+    float:left;
+    width:50px;
+    height:50px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.ham-container{
+    height:50px;
+    display:none;
+    margin-bottom: 25px;
+}
+
+.ham-area{
+    width:200px;
+    margin: 0 auto;
+    border: green 1px solid;
+}
+
+.ham{
+    width:50px;
+}
+
+
+
+main{
+
+}
+
+.home{
+    background-color: #2FAEFF;
+    height:500px;
+}
+
+.headline{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding-top:50px;
+}
+
+.quote{
+    font-size:1.2rem;
+    font-family: serif;
+    font-style: italic;
+    text-align: center;
+    padding-top:50px;
+}
+
+.portfolio{
+    height:500px;
+}
+
+.about{
+    background-color: #17577F;
+    height:500px;
+}
+
+.contact{
+    background-color: #0C2C40;
+    height:500px;
+}
+
+@media only screen and (max-width: 625px) {
+    .nav-items{
+        display:none;
+    }
+    .icons-container{
+        margin: 0 auto;
+    }
+    .ham-container{
+        display:block;
+    }
+
 }
