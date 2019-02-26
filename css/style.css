@@ -30,6 +30,11 @@ nav a {
     color: #FFFFFF;
 }
 
+a img{
+    border: 0;
+    /*ie10 fix to remove border from icons*/
+}
+
 .nav-items{
     list-style: none;
 }
@@ -66,14 +71,8 @@ nav a {
     cursor: pointer;
 }
 
-
-
-main{
-
-}
-
 #home{
-    height:400px;
+    /*height:300px;*/
 }
 
 .headline{
@@ -87,11 +86,55 @@ main{
     font-size:1.8rem;
     text-align: center;
     padding-top:50px;
+    padding-bottom:90px;
 }
 
+
 #portfolio{
-    height:500px;
-    background-color: #f2f2f2;
+    /*height:700px;*/
+    background-color: #ffffff;
+}
+
+.port-container{
+    width:98%;
+    margin: 0 auto;
+    height:1200px;
+    padding-top:25px;
+}
+
+.port-area{
+    width:33.3%;
+    float:left;
+}
+
+.port-pic{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    margin: 10px auto 0 auto;
+}
+
+.port1{
+    background-image: url("../pilot.png");
+    background-color: red;
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.port-text{
+    width:80%;
+    margin:5px auto;
+    height:50px;
+    border:3px green solid;
+
+}
+
+.port-links{
+    width:60%;
+    margin:5px auto;
+    height:40px;
+    border:3px green solid;
 }
 
 #about{
@@ -102,9 +145,26 @@ main{
 
 #contact{
     background-color: #0C2C40;
-    height:500px;
+    height:200px;
 }
 
+@media only screen and (max-width: 1150px) {
+    .port-pic{
+        width:250px;
+        height:250px;
+    }
+    .port-container {
+        height:800px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .port-area {
+        width: 50%;
+    }
+    .port-container {
+        height:1200px;
+    }
+}
 @media only screen and (max-width: 625px) {
     .nav-items{
         display:none;
@@ -123,4 +183,19 @@ main{
     #home{
         height:300px;
     }
+}
+@media only screen and (max-width: 530px) {
+    .port-area{
+        width: 100%;
+    }
+    .port-area:nth-child(4){
+        display:none;
+    }
+    .port-area:nth-child(5){
+        display:none;
+    }
+    .port-area:nth-child(6){
+        display:none;
+    }
+
 }
