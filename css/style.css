@@ -17,7 +17,7 @@ body{
 
 .split1{
     background-color: #34ADFF;
-    background-image: -webkit-linear-gradient(150deg, #34ADFF 35%, #4CBFFF 35%);
+    background-image: -webkit-linear-gradient(150deg, #34ADFF 45%, #4CBFFF 45%);
 }
 
 nav{
@@ -43,6 +43,7 @@ a img{
     float: left;
     margin: 10px;
     cursor: pointer;
+    font-size: 1.6rem;
 }
 
 .nav-items li:hover{
@@ -72,7 +73,7 @@ a img{
 }
 
 #home{
-    /*height:300px;*/
+
 }
 
 .headline{
@@ -80,6 +81,18 @@ a img{
     font-size: 6rem;
     padding-top:50px;
     font-family: 'Yellowtail', cursive;
+}
+
+.portrait{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background-color: red;
+    margin:20px auto;
+    background-image: url("../pete.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .quote{
@@ -91,14 +104,13 @@ a img{
 
 
 #portfolio{
-    /*height:700px;*/
     background-color: #ffffff;
+    padding-bottom:500px;
 }
 
 .port-container{
     width:98%;
     margin: 0 auto;
-    height:1200px;
     padding-top:25px;
 }
 
@@ -115,87 +127,127 @@ a img{
 }
 
 .port1{
-    background-image: url("../pilot.png");
+     background-image: url("../pilot.png");
+     background-color: red;
+     background-position: center;
+     background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover;
+ }
+
+.port2{
+    background-image: url("../cs.jpg");
     background-color: red;
     background-position: center;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
 }
 
+.hide{
+    display:none;
+}
+
 .port-text{
     width:80%;
     margin:5px auto;
     height:50px;
-    border:3px green solid;
+}
 
+.port-text-font{
+    color: #34ADFF;
+    text-align:center;
+    padding-top:15px;
+    font-size:1.3rem;
 }
 
 .port-links{
-    width:60%;
+    width:250px;
     margin:5px auto;
     height:40px;
-    border:3px green solid;
 }
 
-#about{
-    background-color: #013A6B;
-    background-image: -webkit-linear-gradient(45deg, #013A6B 45%, #004E95 45%);
-    height:500px;
+.demo{
+    float:left;
+    margin: 10px 5px;
+    border-radius:50px;
+    padding:4px 50px;
+    background-color:#013A6B;
+    font-family: 'Yellowtail', cursive;
+    color: #FFFFFF;
+    font-size:1rem;
+    letter-spacing:1.5px;
 }
 
-#contact{
-    background-color: #0C2C40;
-    height:200px;
+.link-to-code{
+    width:40px;
+    height:40px;
+    float:right;
+    margin-top:5px;
 }
+
+/*#about{*/
+    /*background-color: #013A6B;*/
+    /*background-image: -webkit-linear-gradient(45deg, #013A6B 60%, #004E95 60%);*/
+    /*height:500px;*/
+/*}*/
+
+/*#contact{*/
+    /*background-color: #0C2C40;*/
+    /*height:200px;*/
+/*}*/
+
 
 @media only screen and (max-width: 1150px) {
     .port-pic{
         width:250px;
         height:250px;
     }
-    .port-container {
-        height:800px;
-    }
+
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .port-area {
         width: 50%;
     }
-    .port-container {
-        height:1200px;
+    .nav-items li {
+        font-size:1rem;
     }
-}
-@media only screen and (max-width: 625px) {
-    .nav-items{
-        display:none;
-    }
-    .ham{
+    .hide{
         display:block;
     }
-    .headline{
-        padding-top:10px;
-        font-size: 4rem;
-    }
-    .quote{
-        font-size:1.4rem;
-        padding-top:40px;
-    }
-    #home{
-        height:300px;
-    }
 }
-@media only screen and (max-width: 530px) {
-    .port-area{
-        width: 100%;
-    }
-    .port-area:nth-child(4){
-        display:none;
-    }
-    .port-area:nth-child(5){
-        display:none;
-    }
-    .port-area:nth-child(6){
-        display:none;
+@media only screen and (max-width: 700px) {
+    .nav-items {
+        display: none;
     }
 
+    .ham {
+        display: block;
+    }
+
+    .headline {
+        padding-top: 10px;
+        font-size: 4rem;
+    }
+
+    .quote {
+        font-size: 1.4rem;
+        padding-top: 40px;
+    }
+
+    .port-area {
+        width: 100%;
+    }
+
+    .port-area:nth-child(4) {
+        display: none;
+    }
+
+    .port-area:nth-child(5) {
+        display: none;
+    }
+
+    .port-area:nth-child(6) {
+        display: none;
+    }
 }
+
+
