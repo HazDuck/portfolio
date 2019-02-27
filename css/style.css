@@ -88,15 +88,15 @@ a img{
 }
 
 .portrait{
-    width:200px;
-    height:200px;
+    width:250px;
+    height:250px;
     border-radius:50%;
     background-color: red;
     margin:20px auto;
     background-image: url("../pete.png");
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .quote{
@@ -134,7 +134,7 @@ a img{
      background-image: url("../pilot.png");
      background-color: red;
      background-position: center;
-     background-repeat: no-repeat; /* Do not repeat the image */
+     background-repeat: no-repeat;
      background-size: cover;
  }
 
@@ -142,7 +142,7 @@ a img{
     background-image: url("../cs.jpg");
     background-color: red;
     background-position: center;
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -166,7 +166,6 @@ a img{
 .port-links{
     width:250px;
     margin:5px auto;
-    height:40px;
 }
 
 .demo{
