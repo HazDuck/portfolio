@@ -26,7 +26,7 @@ nav{
     padding:10px;
 }
 
-nav a {
+nav a{
     color: #FFFFFF;
 }
 
@@ -46,7 +46,11 @@ a img{
     font-size: 1.6rem;
 }
 
-.nav-items li:hover{
+.link{
+    text-decoration: none;
+}
+
+.link:hover{
     text-decoration: underline;
 }
 
@@ -218,35 +222,19 @@ a img{
     .nav-items {
         display: none;
     }
-
     .ham {
         display: block;
     }
-
     .headline {
         padding-top: 10px;
         font-size: 4rem;
     }
-
     .quote {
         font-size: 1.4rem;
         padding-top: 40px;
     }
-
     .port-area {
         width: 100%;
-    }
-
-    .port-area:nth-child(4) {
-        display: none;
-    }
-
-    .port-area:nth-child(5) {
-        display: none;
-    }
-
-    .port-area:nth-child(6) {
-        display: none;
     }
 }
 
