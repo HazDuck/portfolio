@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+}
+
+.gutter {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.brand {
+    color: #FA255E;
+}
+
+h4 {
+    font-size: 1.8rem;
+    padding: 20px 0 0 20px;
+}
+
+.split1 {
+    background-color: #FA255E;
+    background-image: -webkit-linear-gradient(150deg, #000000 32%, #FA255E 32%);
+}
+
+nav {
+    height: 80px;
+    padding: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+}
+
+a img {
+    border: 0;
+    /*ie10 fix to remove border from icons*/
+}
+
+.nav-items {
+    list-style: none;
+}
+
+.nav-items li {
+    float: left;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.icons-container {
+    height: 20px;
+    width: 200px;
+    margin-left: auto;
+}
+
+.icons-container img {
+    float: left;
+    width: 50px;
+    margin-left: 15px;
+}
+
+.ham {
+    width: 50px;
+    float: left;
+    display: none;
+    margin-top: -5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.headline {
+    text-align: center;
+    font-size: 6rem;
+    padding-top: 50px;
+    font-family:'Yellowtail', cursive;
+}
+
+.portrait {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+    background-image: url("../img/pete.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border:7px #FFFFFF solid;
+}
+
+.quote {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+.portfolio {
+    background-color: #FFFFFF;
+    height: 650px;
+}
+
+.port-container {
+    width: 98%;
+    margin: 0 auto;
+    padding-top: 50px;
+    overflow: auto;
+}
+
+.port-area {
+    width: 33.3%;
+    float: left;
+}
+
+.port-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin: 10px auto 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.port1 {
+     background-image: url("../img/pilot.png");
+ }
+
+.port2 {
+    background-image: url("../img/cs.jpg");
+}
+
+.port3 {
+    background-image: url("../img/cs.jpg");
+}
+
+.hide {
+    display: none;
+}
+
+.port-text {
+    width: 80%;
+    margin: 5px auto;
+    height: 50px;
+    color: #FA255E;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.3rem;
+}
+
+.port-links {
+    width: 250px;
+    margin: 5px auto;
+}
+
+.demo {
+    float: left;
+    margin: 10px 5px;
+    border-radius: 50px;
+    padding: 4px 50px;
+    background-color: #FA255E;
+    color: #FFFFFF;
+    font-size: 1rem;
+    border: none;
+}
+
+.link-to-code {
+    width: 40px;
+    float: right;
+    margin-top: 5px;
+}
+
+.about {
+    background-color: #000000;
+    background-image: -webkit-linear-gradient(30deg, #000000 55%, #FA255E 55%);
+    height: 650px;
+}
+
+.about-me-area {
+    width: 40%;
+}
+
+.about-me-text {
+    margin: 10% 5% 20% 20%;
+    font-size: 1.4rem;
+    float: left;
+}
+
+.about-me-pics-container {
+    width: 40%;
+    height: 250px;
+    float: right;
+    margin-right: 5%;
+}
+
+.about-me-pics {
+    width: 50%;
+}
+
+.area1 {
+    float: left;
+}
+
+.area2 {
+    margin: 0 auto;
+}
+
+.about-me-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 10px auto 0 auto;
+    border: 7px #FFFFFF solid;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.me1 {
+    background-image: url("../img/kenya.JPG");
+}
+
+.me2 {
+    background-image: url("../img/bru.JPG");
+}
+
+.me3 {
+    background-image: url("../img/porty.JPG");
+}
+
+.contact {
+    height: 350px;
+}
+
+.contact-container {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.contact-container > a {
+    width: 16.6%;
+    float: left;
+}
+
+.contact-container img {
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media only screen and (max-width: 1275px) {
+    .about-me-pics-container div:nth-child(2) {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1150px) {
+    .port-pic {
+        width: 250px;
+        height: 250px;
+    }
+    .portfolio{
+        height: 550px;
+    }
+
+}
+@media only screen and (max-width: 1000px) {
+    .port-area {
+        width: 50%;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    .portfolio {
+        height: 900px;
+    }
+
+    .about {
+        background-image:none;
+        height: 800px;
+    }
+
+    .about-me-area {
+        width: 100%;
+    }
+
+    .about-me-title {
+        margin-left: 10%;
+    }
+
+    .about-me-text {
+        margin: 10%;
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 725px) {
+    .nav-items {
+        display: none;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .headline {
+        padding-top: 10px;
+        font-size: 3rem;
+    }
+
+    .quote {
+        font-size: 1.4rem;
+        padding-top: 40px;
+    }
+
+    .port-area {
+        width: 100%;
+    }
+
+    .portfolio {
+        height: 1650px;
+    }
+
+    .about-me-pics-container {
+        display: none;
+    }
+
+    .about {
+        height: 500px;
+    }
+
+    .contact-container a {
+        width: 33.3%;
+        margin-bottom: 30px;
+    }
+}
