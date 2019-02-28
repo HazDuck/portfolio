@@ -1,266 +1,266 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-size: 15px;
-    font-family:'Roboto', sans-serif;
-    letter-spacing:1.5px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.5px;
     color: #FFFFFF;
 }
 
-.gutter{
-    width:80%;
+.gutter {
+    width: 80%;
     margin: 0 auto;
 }
 
-.brand{
+.brand {
     color: #FA255E;
 }
 
-h4{
+h4 {
     font-size: 1.8rem;
     padding: 20px 0 0 20px;
 }
 
-.split1{
+.split1 {
     background-color: #FA255E;
     background-image: -webkit-linear-gradient(150deg, #000000 32%, #FA255E 32%);
 }
 
-nav{
-    height:80px;
-    font-size: 1.3rem;
-    padding:10px;
+nav {
+    height: 80px;
+    padding: 10px;
 }
 
-nav a{
+nav a {
     color: #FFFFFF;
 }
 
-a img{
+a img {
     border: 0;
     /*ie10 fix to remove border from icons*/
 }
 
-.nav-items{
+.nav-items {
     list-style: none;
 }
 
-.nav-items li{
+.nav-items li {
     float: left;
     margin: 10px;
     cursor: pointer;
     font-size: 1.6rem;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
 
-.link:hover{
+.link:hover {
     text-decoration: underline;
 }
 
-.icons-container{
-    height:20px;
-    width:200px;
+.icons-container {
+    height: 20px;
+    width: 200px;
     margin-left: auto;
 }
 
-.icons-container img{
-    float:left;
-    width:50px;
+.icons-container img {
+    float: left;
+    width: 50px;
     margin-left: 15px;
 }
 
-.ham{
-    width:50px;
-    float:left;
-    display:none;
-    margin-top:-5px;
-    margin-left:5px;
+.ham {
+    width: 50px;
+    float: left;
+    display: none;
+    margin-top: -5px;
+    margin-left: 5px;
     cursor: pointer;
 }
 
-.headline{
-    text-align:center;
-    font-size:6rem;
-    padding-top:50px;
+.headline {
+    text-align: center;
+    font-size: 6rem;
+    padding-top: 50px;
     font-family:'Yellowtail', cursive;
 }
 
-.portrait{
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    margin:20px auto;
+.portrait {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
     background-image: url("../img/pete.png");
-    background-position:center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border:7px #FFFFFF solid;
 }
 
-.quote{
-    font-size:1.8rem;
+.quote {
+    font-size: 1.8rem;
     text-align: center;
-    padding-top:50px;
-    padding-bottom:90px;
+    padding-top: 50px;
+    padding-bottom: 90px;
 }
 
-.portfolio{
-    background-color:#FFFFFF;
-    height:650px;
+.portfolio {
+    background-color: #FFFFFF;
+    height: 650px;
 }
 
-.port-container{
-    width:98%;
-    margin:0 auto;
-    padding-top:50px;
+.port-container {
+    width: 98%;
+    margin: 0 auto;
+    padding-top: 50px;
+    overflow: auto;
 }
 
-.port-area{
-    width:33.3%;
-    float:left;
+.port-area {
+    width: 33.3%;
+    float: left;
 }
 
-.port-pic{
-    width:350px;
-    height:350px;
-    border-radius:50%;
+.port-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
     margin: 10px auto 0 auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.port1{
+.port1 {
      background-image: url("../img/pilot.png");
  }
 
-.port2{
+.port2 {
     background-image: url("../img/cs.jpg");
 }
 
-.port3{
+.port3 {
     background-image: url("../img/cs.jpg");
 }
 
-.hide{
-    display:none;
+.hide {
+    display: none;
 }
 
-.port-text{
-    width:80%;
-    margin:5px auto;
-    height:50px;
-    color:#FA255E;
-    text-align:center;
-    padding-top:15px;
-    font-size:1.3rem;
+.port-text {
+    width: 80%;
+    margin: 5px auto;
+    height: 50px;
+    color: #FA255E;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.3rem;
 }
 
-.port-links{
-    width:250px;
-    margin:5px auto;
+.port-links {
+    width: 250px;
+    margin: 5px auto;
 }
 
-.demo{
-    float:left;
+.demo {
+    float: left;
     margin: 10px 5px;
-    border-radius:50px;
-    padding:4px 50px;
-    background-color:#FA255E;
+    border-radius: 50px;
+    padding: 4px 50px;
+    background-color: #FA255E;
     color: #FFFFFF;
-    font-size:1rem;
-    border:none;
+    font-size: 1rem;
+    border: none;
 }
 
-.link-to-code{
-    width:40px;
-    float:right;
-    margin-top:5px;
+.link-to-code {
+    width: 40px;
+    float: right;
+    margin-top: 5px;
 }
 
-.about{
+.about {
     background-color: #000000;
     background-image: -webkit-linear-gradient(30deg, #000000 55%, #FA255E 55%);
-    height:650px;
+    height: 650px;
 }
 
-.about-me-area{
-    width:40%;
+.about-me-area {
+    width: 40%;
 }
 
-.about-me-text{
-    margin:10% 5% 20% 20%;
-    font-size: 1.2rem;
-    float:left;
+.about-me-text {
+    margin: 10% 5% 20% 20%;
+    font-size: 1.4rem;
+    float: left;
 }
 
-.about-me-pics-container{
-    width:40%;
-    height:250px;
-    float:right;
-    margin-right:5%;
+.about-me-pics-container {
+    width: 40%;
+    height: 250px;
+    float: right;
+    margin-right: 5%;
 }
 
-.about-me-pics{
-    width:50%;
+.about-me-pics {
+    width: 50%;
 }
 
-.area1{
-    float:left;
+.area1 {
+    float: left;
 }
 
-.area2{
-    margin:0 auto;
+.area2 {
+    margin: 0 auto;
 }
 
-.about-me-pic{
-    width:250px;
-    height:250px;
-    border-radius:50%;
+.about-me-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
     margin: 10px auto 0 auto;
-    border:7px #FFFFFF solid;
+    border: 7px #FFFFFF solid;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.me1{
+.me1 {
     background-image: url("../img/kenya.JPG");
 }
 
-.me2{
+.me2 {
     background-image: url("../img/bru.JPG");
 }
 
-.me3{
+.me3 {
     background-image: url("../img/porty.JPG");
 }
 
-.contact{
-    height:350px;
+.contact {
+    height: 350px;
 }
 
-.contact-container{
-    width:80%;
-    margin:100px auto;
+.contact-container {
+    width: 80%;
+    margin: 100px auto;
 }
 
-.contact-container > a{
-    width:16.6%;
-    float:left;
+.contact-container > a {
+    width: 16.6%;
+    float: left;
 }
 
-.contact-container img{
-    width:50px;
+.contact-container img {
+    width: 50px;
     margin: 0 auto;
-    display:block;
+    display: block;
 }
 
 @media only screen and (max-width: 1275px) {
@@ -276,78 +276,78 @@ a img{
         height: 250px;
     }
     .portfolio{
-        height:550px;
+        height: 550px;
     }
 
 }
 @media only screen and (max-width: 1000px) {
-    .port-area{
+    .port-area {
         width: 50%;
     }
 
-    .hide{
-        display:block;
+    .hide {
+        display: block;
     }
 
-    .portfolio{
-        height:900px;
+    .portfolio {
+        height: 900px;
     }
 
-    .about{
+    .about {
         background-image:none;
-        height:800px;
+        height: 800px;
     }
 
-    .about-me-area{
+    .about-me-area {
         width: 100%;
     }
 
-    .about-me-title{
-        margin-left:10%;
+    .about-me-title {
+        margin-left: 10%;
     }
 
     .about-me-text {
         margin: 10%;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }
 @media only screen and (max-width: 725px) {
-    .nav-items{
+    .nav-items {
         display: none;
     }
 
-    .ham{
+    .ham {
         display: block;
     }
 
-    .headline{
+    .headline {
         padding-top: 10px;
         font-size: 3rem;
     }
 
-    .quote{
+    .quote {
         font-size: 1.4rem;
         padding-top: 40px;
     }
 
-    .port-area{
+    .port-area {
         width: 100%;
     }
 
-    .portfolio{
+    .portfolio {
         height: 1650px;
     }
 
-    .about-me-pics-container{
+    .about-me-pics-container {
         display: none;
     }
 
     .about {
-        height:500px;
+        height: 500px;
     }
 
-    .contact-container a{
-        width:33.3%;
-        margin-bottom:30px;
+    .contact-container a {
+        width: 33.3%;
+        margin-bottom: 30px;
     }
 }
