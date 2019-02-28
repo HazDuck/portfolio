@@ -6,7 +6,8 @@
 
 body{
     font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Roboto', sans-serif;
+    letter-spacing:1.5px;
     color: #FFFFFF;
 }
 
@@ -16,8 +17,8 @@ body{
 }
 
 .split1{
-    background-color: #34ADFF;
-    background-image: -webkit-linear-gradient(150deg, #34ADFF 45%, #4CBFFF 45%);
+    background-color: #FA255E;
+    background-image: -webkit-linear-gradient(150deg, #000000 32%, #FA255E 32%);
 }
 
 nav{
@@ -55,8 +56,8 @@ a img{
 }
 
 .icons-container{
-    height: 20px;
-    width: 200px;
+    height:20px;
+    width:200px;
     margin-left: auto;
 }
 
@@ -69,38 +70,30 @@ a img{
 
 .ham{
     width:50px;
-    float: left;
+    float:left;
     display:none;
     margin-top:-5px;
     margin-left:5px;
     cursor: pointer;
 }
 
-#home{
-
-}
-
 .headline{
-    text-align: center;
-    font-size: 6rem;
+    text-align:center;
+    font-size:6rem;
     padding-top:50px;
-    font-family: 'Yellowtail', cursive;
-}
-
-.intro{
-    color:#FFA31A;
+    font-family:'Yellowtail', cursive;
 }
 
 .portrait{
     width:250px;
     height:250px;
     border-radius:50%;
-    background-color: red;
     margin:20px auto;
-    background-image: url("../pete.png");
-    background-position: center;
+    background-image: url("../img/pete.png");
+    background-position:center;
     background-size: cover;
     background-repeat: no-repeat;
+    border:7px #FFFFFF solid;
 }
 
 .quote{
@@ -110,16 +103,14 @@ a img{
     padding-bottom:90px;
 }
 
-
 #portfolio{
     background-color:#FFFFFF;
-    /*background-image: -webkit-linear-gradient(30deg, #CFE8FF 30%, #ffffff 70%);*/
     height:550px;
 }
 
 .port-container{
     width:98%;
-    margin: 0 auto;
+    margin:0 auto;
     padding-top:25px;
 }
 
@@ -133,22 +124,21 @@ a img{
     height:350px;
     border-radius:50%;
     margin: 10px auto 0 auto;
-}
-
-.port1{
-     background-image: url("../pilot.png");
-     background-color: red;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
- }
-
-.port2{
-    background-image: url("../cs.jpg");
-    background-color: red;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.port1{
+     background-image: url("../img/pilot.png");
+ }
+
+.port2{
+    background-image: url("../img/cs.jpg");
+}
+
+.port3{
+    background-image: url("../img/cs.jpg");
 }
 
 .hide{
@@ -162,7 +152,7 @@ a img{
 }
 
 .port-text-font{
-    color: #34ADFF;
+    color:#FA255E;
     text-align:center;
     padding-top:15px;
     font-size:1.3rem;
@@ -178,11 +168,10 @@ a img{
     margin: 10px 5px;
     border-radius:50px;
     padding:4px 50px;
-    background-color:#FFA31A;
-    font-family: 'Yellowtail', cursive;
+    background-color:#FA255E;
     color: #FFFFFF;
     font-size:1rem;
-    letter-spacing:1.5px;
+    border:none;
 }
 
 .link-to-code{
@@ -193,27 +182,68 @@ a img{
 }
 
 #about{
-    background-color: #CFE8FF;
-    background-image: -webkit-linear-gradient(30deg, #CFE8FF 50%, #004E95 50%);
-    height:550px;
+    background-color: #000000;
+    background-image: -webkit-linear-gradient(30deg, #000000 55%, #FA255E 55%);
+    height:700px;
 }
 
 .about-me-area{
     width:40%;
-    height:100%;
 }
 
 .about-me-title{
-    margin-left:10%;
+    margin-left:20%;
     padding-top:5%;
-    font-size: 1.6rem;
-    color: #004E95;
+    font-size: 1.8rem;
 }
 
 .about-me-text{
-    margin:10% 5% 20% 10%;
-    color: #004E95;
+    margin:10% 5% 20% 20%;
     font-size: 1.2rem;
+    float:left;
+}
+
+.about-me-pics-container{
+    width:40%;
+    height:250px;
+    float:right;
+    margin-right:5%;
+}
+
+.about-me-pics{
+    width:50%;
+    height:100%;
+}
+
+.area1{
+    float:left;
+}
+
+.area2{
+    margin:0 auto;
+}
+
+.about-me-pic{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    margin: 10px auto 0 auto;
+    border:7px #FFFFFF solid;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.me1{
+    background-image: url("../img/kenya.JPG");
+}
+
+.me2{
+    background-image: url("../img/bru.JPG");
+}
+
+.me3{
+    background-image: url("../img/porty.JPG");
 }
 
 /*#contact{*/
@@ -221,11 +251,17 @@ a img{
     /*height:200px;*/
 /*}*/
 
+@media only screen and (max-width: 1275px) {
+    .about-me-pics-container div:nth-child(2) {
+        display: none;
+    }
+
+}
 
 @media only screen and (max-width: 1150px) {
-    .port-pic{
-        width:250px;
-        height:250px;
+    .port-pic {
+        width: 250px;
+        height: 250px;
     }
     #portfolio{
         height:450px;
@@ -233,40 +269,72 @@ a img{
 
 }
 @media only screen and (max-width: 1000px) {
-    .port-area {
+    .port-area{
         width: 50%;
     }
-    .nav-items li {
-        font-size:1rem;
-    }
+
     .hide{
         display:block;
     }
+
     #portfolio{
         height:800px;
     }
+
+    #about{
+        background-image:none;
+        height:800px;
+    }
+
+    .about-me-area{
+        width: 100%;
+    }
+
+    .about-me-title{
+        margin-left:10%;
+    }
+
+    .about-me-text {
+        margin: 10%;
+        font-size: 1rem;
+    }
 }
-@media only screen and (max-width: 700px) {
-    .nav-items {
+@media only screen and (max-width: 725px) {
+    .nav-items{
         display: none;
     }
-    .ham {
+
+    .ham{
         display: block;
     }
-    .headline {
+
+    .headline{
         padding-top: 10px;
-        font-size: 4rem;
+        font-size: 3rem;
     }
-    .quote {
+
+    .quote{
         font-size: 1.4rem;
         padding-top: 40px;
     }
-    .port-area {
+
+    .port-area{
         width: 100%;
     }
+
     #portfolio{
-        height:1550px;
+        height: 1550px;
+    }
+
+    .about-me-pics-container div:nth-child(1) {
+        display: none;
+    }
+
+    #about {
+        height:500px;
+    }
+
+    .about-me-text {
+        font-size:0.9rem;
     }
 }
-
-
