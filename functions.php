@@ -12,8 +12,8 @@
  * @return array returns an assoc array with all the info requested
  */
 function getAboutMeInfo (PDO $db)
-:array {
-    $query = $db->prepare("SELECT `id`, `paratext` from `about_me`;");
+: array {
+    $query = $db->prepare("SELECT `id`, `paratext` from `about_me` WHERE `deleted` = '0';");
     $query->execute();
     return $query->fetchAll();
 }
@@ -28,9 +28,12 @@ function printAboutMeInfo(array $infos)
 : string {
     $result = '';
     foreach($infos as $info) {
-        $result .= '<p class="about-me-text">' . $info['paratext'] . '</p>';
+        if ($info['paratext'] != ''){
+            $result .= '<p class="about-me-text">' . $info['paratext'] . '</p>';
+        } else {
+            return 'Must be a valid about me text';
+        }
     }
-    return $result;
+        return $result;
 }
-
 ?>
