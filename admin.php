@@ -25,6 +25,7 @@
             <select></select>
             <input type="submit" value="Choose" name="chooseSub">
             <textarea name="edit" type="text" rows="5" cols="50"></textarea>
+            <input type="submit" value="Edit" name="editSub">
             <p>Delete:</p>
             <select></select>
             <input type="submit" value="Delete" name="deleteSub">
