@@ -5,6 +5,11 @@
  * Date: 2019-03-18
  * Time: 10:05
  */
+require_once 'functions.php';
+require_once 'dbConnectPortfolio.php';
+$db = getDbConnection();
+$aboutMeInfo = getAboutMeInfo($db);
+$showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
 ?>
 
 <!DOCTYPE html>
@@ -79,9 +84,7 @@
     <main id="about" class="about">
         <h4>A Little Bit About Me</h4>
         <div class="about-me-area">
-            <p class="about-me-text">I’m currently improving my skills as a Full Stack developer.
-                I have a diverse career background including working as part of the Product Owner team for Cancer Research UK’s flagship product “Race for Life”, teaching English in Tokyo, and helping a small Cornish company create an app for their staff.
-                Outside of studying I enjoy keeping fit and being outdoors. I’m looking forward to competing at the Turf Games in London this summer and driving my VW van to go paddle boarding in Cornwall.</p>
+            <?php echo $showAboutMeInfo; ?>
         </div>
         <div class="about-me-pics-container">
             <div class="about-me-pics area1">
