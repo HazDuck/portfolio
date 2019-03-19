@@ -37,7 +37,6 @@ class StackTest extends Testcase
         $case = printAboutMeInfo($input);
         $this-> assertEquals($expected, $case);
     }
-
 }
 
 ?>
