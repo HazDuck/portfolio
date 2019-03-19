@@ -16,7 +16,6 @@ function getAboutMeInfo (PDO $db) : array {
     $query->execute();
     return $query->fetchAll();
 }
-
 /**
  *loops through the array and puts the required contents into p tags with the about me class that is required on the text
  *
