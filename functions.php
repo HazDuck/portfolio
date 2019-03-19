@@ -28,10 +28,10 @@ function printAboutMeInfo(array $infos)
 : string {
     $result = '';
     foreach($infos as $info) {
-        if ($info['paratext'] != ''){
+        if (is_string($info['paratext']) && array_key_exists('paratext', $info)){
             $result .= '<p class="about-me-text">' . $info['paratext'] . '</p>';
         } else {
-            return 'Must be a valid about me text';
+            $result .= '';
         }
     }
         return $result;

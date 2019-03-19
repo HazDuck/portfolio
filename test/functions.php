@@ -19,16 +19,23 @@ class StackTest extends Testcase
     }
 
     public function testPrintAboutMeInfoFailure() {
-    $expected = 'Must be a valid about me text';
-    $input = [['paratext'=>'']];
+    $expected = '';
+    $input = [['paratext'=>[]]];
     $case = printAboutMeInfo($input);
     $this-> assertEquals($expected, $case);
-}
+    }
 
     public function testPrintAboutMeInfoMalf() {
         $input = 1.1;
         $this->expectException(TypeError::class);
         printAboutMeInfo($input);
+    }
+
+    public function testPrintAboutMeInfoFailure2() {
+        $expected = '';
+        $input = [['tyhgfg'=>'']];
+        $case = printAboutMeInfo($input);
+        $this-> assertEquals($expected, $case);
     }
 
 }
