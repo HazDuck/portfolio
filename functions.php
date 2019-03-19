@@ -11,8 +11,7 @@
  * @param $db PDO connects to the required database
  * @return array returns an assoc array with all the info requested
  */
-function getAboutMeInfo (PDO $db)
-: array {
+function getAboutMeInfo (PDO $db) : array {
     $query = $db->prepare("SELECT `id`, `paratext` from `about_me` WHERE `deleted` = '0';");
     $query->execute();
     return $query->fetchAll();
@@ -24,8 +23,7 @@ function getAboutMeInfo (PDO $db)
  * @param array $infos required arrays
  * @return string includes p tags, class and accesses the paratext from the db
  */
-function printAboutMeInfo(array $infos)
-: string {
+function printAboutMeInfo(array $infos) : string {
     $result = '';
     foreach($infos as $info) {
         if (is_string($info['paratext']) && array_key_exists('paratext', $info)){
@@ -36,4 +34,17 @@ function printAboutMeInfo(array $infos)
     }
         return $result;
 }
+
+/**
+ * inserts provided string into about me table
+ *
+ * @param PDO $db PDO connects to the required database
+ * @param $postdata array that is required to be passed to the db
+ */
+function addAboutMetoDB (PDO $db, string $postdata) : void{
+    $query = $db->prepare("INSERT INTO `about_me` (`paratext`) VALUES (:text)");
+    $query->bindParam(':text', $postdata);
+    $query->execute();
+}
+
 ?>
