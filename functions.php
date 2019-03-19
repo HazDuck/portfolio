@@ -9,6 +9,7 @@
  * creates an associative array with the id and text from the requested table
  *
  * @param $db PDO connects to the required database
+ *
  * @return array returns an assoc array with all the info requested
  */
 function getAboutMeInfo (PDO $db) : array {
@@ -16,10 +17,12 @@ function getAboutMeInfo (PDO $db) : array {
     $query->execute();
     return $query->fetchAll();
 }
+
 /**
  *loops through the array and puts the required contents into p tags with the about me class that is required on the text
  *
  * @param array $infos required arrays
+ *
  * @return string includes p tags, class and accesses the paratext from the db
  */
 function printAboutMeInfo(array $infos) : string {
@@ -31,17 +34,43 @@ function printAboutMeInfo(array $infos) : string {
             $result .= '';
         }
     }
-        return $result;
+    return $result;
 }
 
 /**
  * inserts provided string into about me table
  *
  * @param PDO $db PDO connects to the required database
+ *
  * @param $postdata array that is required to be passed to the db
  */
 function addAboutMetoDB (PDO $db, string $postdata) : void{
     $query = $db->prepare("INSERT INTO `about_me` (`paratext`) VALUES (:text)");
+    $query->bindParam(':text', $postdata);
+    $query->execute();
+}
+
+function fillEditDropDown ($infos) {
+    $result = '';
+    foreach($infos as $info) {
+        $intro = substr($info['paratext'], 0, 20);
+        $result .= '<option value=' . $info['id'] . '>' . $intro . '</option>';
+    }
+    return $result;
+}
+
+function getChosenTextToEdit (PDO $db, $dbEntryId) : array {
+    $query = $db->prepare("SELECT `id`, `paratext` from `about_me` WHERE `id` = '$dbEntryId';");
+    $query->execute();
+    return $query->fetch();
+}
+
+function retrieveTextFromArray ($arr) {
+    return $arr['paratext'];
+}
+
+function editAboutMe (PDO $db, string $postdata, $id) {
+    $query = $db->prepare("UPDATE `about_me` SET `paratext` = :text WHERE `id` = '$id';");
     $query->bindParam(':text', $postdata);
     $query->execute();
 }
