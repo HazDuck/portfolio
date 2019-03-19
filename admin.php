@@ -5,6 +5,7 @@
  * Date: 2019-03-18
  * Time: 10:05
  */
+
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +26,7 @@
             <select></select>
             <input type="submit" value="Choose" name="chooseSub">
             <textarea name="edit" type="text" rows="5" cols="50"></textarea>
+            <input type="submit" value="Edit" name="editSub">
             <p>Delete:</p>
             <select></select>
             <input type="submit" value="Delete" name="deleteSub">
