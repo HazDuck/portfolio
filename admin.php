@@ -5,7 +5,14 @@
  * Date: 2019-03-18
  * Time: 10:05
  */
+require_once 'functions.php';
+require_once 'dbConnectPortfolio.php';
 
+if(isset($_POST['add'])) {
+    $db = getDbConnection();
+    $dataFromAdd = $_POST['add'];
+    addAboutMetoDB($db, $dataFromAdd);
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +25,7 @@
 </head>
 <body>
     <h4>Howdy Pedro</h4>
-        <form action = '' method="post">
+        <form action='' method="post">
             <p>Add:</p>
             <textarea name="add" type="text" rows="5" cols="50"></textarea>
             <input type="submit" value="Add" name="addSub">
