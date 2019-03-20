@@ -50,7 +50,15 @@ function addAboutMetoDB (PDO $db, string $postdata) : void{
     $query->execute();
 }
 
-function fillEditDropDown ($infos) {
+/**
+ * takes an array and loops through extracting the first 20 characters of each text input. It then populates them into a dropdown list.
+ *
+ * @param $infos array of db information
+ *
+ * @return string returns a string that can be printed to show a drop down option or options.
+ *
+ */
+function fillEditDropDown (array $infos) :string {
     $result = '';
     foreach($infos as $info) {
         $intro = substr($info['paratext'], 0, 20);
@@ -59,20 +67,78 @@ function fillEditDropDown ($infos) {
     return $result;
 }
 
-function getChosenTextToEdit (PDO $db, $dbEntryId) : array {
+/**
+ *retrieves one result from a db where the id matches the id provided
+ *
+ * @param PDO $db connection to db
+ *
+ * @param $dbEntryId string id and text values to retrieve from db
+ *
+ * @return array returns an array of the information required
+ */
+function getChosenTextToEdit (PDO $db, string $dbEntryId) : array {
     $query = $db->prepare("SELECT `id`, `paratext` from `about_me` WHERE `id` = '$dbEntryId';");
     $query->execute();
     return $query->fetch();
 }
 
-function retrieveTextFromArray ($arr) {
-    return $arr['paratext'];
+/**
+ * access the value of paratext from any array passed to it
+ *
+ * @param $arr array including a paratext key and value
+ *
+ * @return string contained in the value of the paratext key
+ */
+function retrieveTextFromArray (array $arr) : string {
+    if ($arr['paratext'] == '') {
+        return 'cannot be empty';
+    } else {
+        return $arr['paratext'];
+    }
 }
 
-function editAboutMe (PDO $db, string $postdata, $id) {
+/**
+ * updates the paratext field of the about me table of the provided db
+ *
+ * @param PDO $db PDO connects to the required database
+ *
+ * @param string $postdata provided
+ *
+ * @param $id
+ */
+function editAboutMe (PDO $db, $postdata, string $id) : void {
     $query = $db->prepare("UPDATE `about_me` SET `paratext` = :text WHERE `id` = '$id';");
     $query->bindParam(':text', $postdata);
     $query->execute();
+}
+
+/**
+ * takes a string and returns false if it is empty and true if it has text
+ *
+ * @param string $string string to test if empty
+ *
+ * @return bool true or false if empty or not
+ */
+function checkIfEmpty (string $string) : bool {
+    if ($string == '') {
+        $hasGotText = false;
+    } else {
+        $hasGotText = true;
+    }
+    return $hasGotText;
+}
+
+/**
+ *trims white space if present
+ *
+ * @param string $string to be trimmed
+ *
+ * @return string trimmed string
+ */
+function trimWhiteSpace (string $string) : string {
+    $trimmedStart = ltrim($string);
+    $trimmedEnd = rtrim($trimmedStart);
+    return $trimmedEnd;
 }
 
 ?>
