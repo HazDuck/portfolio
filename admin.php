@@ -12,12 +12,15 @@ $db = getDbConnection();
 $pullFromDatabase = getAboutMeInfo($db);
 $dropdownContents = fillEditDropDown($pullFromDatabase);
 
+
 if(isset($_POST['addSub'])) {
     $dataFromAdd = $_POST['add'];
-    $okToSend= checkIfEmpty($dataFromAdd);
+    $trimmedText = trimWhiteSpace($dataFromAdd);
+    $okToSend= checkIfEmpty($trimmedText);
     if ($okToSend) {
-        $trimmedText = trimWhiteSpace($dataFromAdd);
         addAboutMetoDB($db, $trimmedText);
+//        $dave = successMessage($dataFromAdd);
+//        var_dump($dave);
         header('Location: admin.php');
     }
 }
@@ -26,14 +29,15 @@ if(isset($_POST['chooseSub'])) {
     $dropdownID = $_POST['editDropdown'];
     $dropDownSelectionFullArray = getChosenTextToEdit($db, $dropdownID);
     $dropDownSelectionText = retrieveTextFromArray($dropDownSelectionFullArray);
+    $showEditButton = showButton();
 }
 
 if(isset($_POST['editSub'])) {
     $textFromEdit = $_POST['edit'];
     $idFromEdit = $_POST['editId'];
-    $okToEdit= checkIfEmpty($textFromEdit);
+    $trimmedTextEdit = trimWhiteSpace($textFromEdit);
+    $okToEdit= checkIfEmpty($trimmedTextEdit);
     if ($okToEdit) {
-        $trimmedTextEdit = trimWhiteSpace($textFromEdit);
         editAboutMe($db, $trimmedTextEdit, $idFromEdit);
         header('Location: admin.php');
     }
@@ -59,26 +63,28 @@ if(isset($_POST['editSub'])) {
             <p>Edit:</p>
         <form action="admin.php" method="post" id="editDropDownForm">
             <select name="editDropdown">
-                <?php echo $dropdownContents; ?>
+                <?php
+                if (isset($_POST)) {
+                    echo $dropdownContents;
+                }
+                ?>
             </select>
             <input type="submit" name="chooseSub" value="Choose" >
         </form>
 
         <form action="admin.php" method="post" id="editForm">
-            <textarea name="edit" type="text" rows="5" cols="50" form="editForm">
-<?php echo $dropDownSelectionText ?>
-            </textarea>
+            <textarea name="edit" type="text" rows="5" cols="50" form="editForm"><?php echo $dropDownSelectionText ?></textarea>
             <?php
             if (isset($dropdownID)) {
                 echo "<input type= 'hidden' value=" . $dropdownID . " name='editId'>";
             }
+            echo $showEditButton;
             ?>
-            <input type="submit" name="editSub" value="Edit" >
         </form>
             <p>Delete:</p>
         <form action="admin.php" method="post" id="deleteDropDownForm">
             <select></select>
             <input type="submit" name="deleteSub" value="Delete" >
         </form>
-<h4><a href="">Back to page--></a></h4>
+<h4><a href="index.php">Back to page--></a></h4>
 </body>

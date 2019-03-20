@@ -61,7 +61,7 @@ function addAboutMetoDB (PDO $db, string $postdata) : void{
 function fillEditDropDown (array $infos) :string {
     $result = '';
     foreach($infos as $info) {
-        $intro = substr($info['paratext'], 0, 20);
+        $intro = substr($info['paratext'], 0, 40);
         $result .= '<option value=' . $info['id'] . '>' . $intro . '</option>';
     }
     return $result;
@@ -90,7 +90,7 @@ function getChosenTextToEdit (PDO $db, string $dbEntryId) : array {
  * @return string contained in the value of the paratext key
  */
 function retrieveTextFromArray (array $arr) : string {
-    if ($arr['paratext'] == '') {
+    if(empty($arr['paratext'])) {
         return 'cannot be empty';
     } else {
         return $arr['paratext'];
@@ -120,7 +120,7 @@ function editAboutMe (PDO $db, $postdata, string $id) : void {
  * @return bool true or false if empty or not
  */
 function checkIfEmpty (string $string) : bool {
-    if ($string == '') {
+    if (empty($string)) {
         $hasGotText = false;
     } else {
         $hasGotText = true;
@@ -136,9 +136,19 @@ function checkIfEmpty (string $string) : bool {
  * @return string trimmed string
  */
 function trimWhiteSpace (string $string) : string {
-    $trimmedStart = ltrim($string);
-    $trimmedEnd = rtrim($trimmedStart);
-    return $trimmedEnd;
+    return trim($string);
+}
+
+function showButton () : string {
+    return '<input type="submit" name="editSub" value="Edit" >';
+}
+
+function successMessage ($successfulUpload) {
+    if ($successfulUpload) {
+        return 'Yup- successfully added';
+    } else {
+        return 'Nope- not successfully uploaded';
+    }
 }
 
 ?>
