@@ -5,8 +5,8 @@ require_once 'dbConnectPortfolio.php';
 
 $db = getDbConnection();
 session_start();
-
-if($_SESSION['log'] == true){
+$sessionStatus = testSession($_SESSION['log']);
+if($sessionStatus){
     header('location: admin.php');
 }
 

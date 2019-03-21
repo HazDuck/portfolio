@@ -4,48 +4,47 @@ require_once 'dbConnectPortfolio.php';
 
 $db = getDbConnection();
 session_start();
-
-if($_SESSION['log'] == true) {
-
-    if (isset($_POST['addSub'])) {
-        $dataFromAdd = $_POST['add'];
-        $trimmedText = trimWhiteSpace($dataFromAdd);
-        $okToSend = checkIfEmpty($trimmedText);
-        $successOrFail = successMessage($okToSend);
-        if ($okToSend) {
-            $successfulUpload = addAboutMetoDB($db, $trimmedText);
-            $successOrFail = successMessage($successfulUpload);
-        }
-    }
-
-    if (isset($_POST['chooseSub'])) {
-        $dropdownID = $_POST['editDropdown'];
-        $dropDownSelectionFullArray = getChosenTextToEdit($db, $dropdownID);
-        $dropDownSelectionText = retrieveTextFromArray($dropDownSelectionFullArray);
-        $showEditButton = showButton();
-    }
-
-    if (isset($_POST['editSub'])) {
-        $textFromEdit = $_POST['edit'];
-        $idFromEdit = $_POST['editId'];
-        $trimmedTextEdit = trimWhiteSpace($textFromEdit);
-        $okToEdit = checkIfEmpty($trimmedTextEdit);
-        if ($okToEdit) {
-            editAboutMe($db, $trimmedTextEdit, $idFromEdit);
-        }
-    }
-
-    if (isset($_POST['deleteSub'])) {
-        $deleteDropdownID = $_POST['deleteDropdown'];
-        deleteAboutMeText($db, $deleteDropdownID);
-    }
-
-    $pullFromDatabase = getAboutMeInfo($db);
-    $dropdownContents = fillEditDropDown($pullFromDatabase);
-
-} else {
+$sessionStatus = testSession($_SESSION['log']);
+if(!$sessionStatus) {
     header('location: signin.php');
+    }
+
+if (isset($_POST['addSub'])) {
+    $dataFromAdd = $_POST['add'];
+    $trimmedText = trimWhiteSpace($dataFromAdd);
+    $okToSend = checkIfEmpty($trimmedText);
+    $successOrFail = successMessage($okToSend);
+    if ($okToSend) {
+        $successfulUpload = addAboutMetoDB($db, $trimmedText);
+        $successOrFail = successMessage($successfulUpload);
+    }
 }
+
+if (isset($_POST['chooseSub'])) {
+    $dropdownID = $_POST['editDropdown'];
+    $dropDownSelectionFullArray = getChosenTextToEdit($db, $dropdownID);
+    $dropDownSelectionText = retrieveTextFromArray($dropDownSelectionFullArray);
+    $showEditButton = showButton();
+}
+
+if (isset($_POST['editSub'])) {
+    $textFromEdit = $_POST['edit'];
+    $idFromEdit = $_POST['editId'];
+    $trimmedTextEdit = trimWhiteSpace($textFromEdit);
+    $okToEdit = checkIfEmpty($trimmedTextEdit);
+    if ($okToEdit) {
+        editAboutMe($db, $trimmedTextEdit, $idFromEdit);
+    }
+}
+
+if (isset($_POST['deleteSub'])) {
+    $deleteDropdownID = $_POST['deleteDropdown'];
+    deleteAboutMeText($db, $deleteDropdownID);
+}
+
+$pullFromDatabase = getAboutMeInfo($db);
+$dropdownContents = fillEditDropDown($pullFromDatabase);
+
 ?>
 
 <!DOCTYPE html>

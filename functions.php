@@ -175,9 +175,13 @@ function deleteAboutMeText (PDO $db, string $id) : void {
  * takes the give name and the database name and checks to see if they are the same. It also checks that the password provided and the hashed password are the same.
  *
  * @param $name string user name provided by the user
+ *
  * @param $pword string password provided by the user
+ *
  * @param $username string password provided by the user
+ *
  * @param $password string hashed password stored in the db
+ *
  * @return bool returns a true if the usernames match and the password provided matches the hashed password on the db
  */
 function signIn (string $name, string $pword, string $username, string $password) : bool {
@@ -189,13 +193,28 @@ function signIn (string $name, string $pword, string $username, string $password
 }
 
 /**
- * @param PDO $db
- * @return array
+ * returns the credentials in the db tidied to an id of 1
+ *
+ * @param PDO $db db connection
+ *
+ * @return array returns the username and password of the entry with an id of 1
  */
 function getCreds (PDO $db) : array {
     $query = $db->prepare("SELECT `username`, `password` from `password` WHERE `id` = 1");
     $query->execute();
     return $query->fetchAll();
+}
+
+/**
+ * checks if a value is true and returns true or if it is
+ *
+ * @param $sessionStatus mixed value to test
+ * @return bool returns true if it is true and false if not
+ */
+function testSession ($sessionStatus) : bool {
+    if ($sessionStatus) {
+        return true;
+    }
 }
 
 ?>
