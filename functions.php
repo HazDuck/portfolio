@@ -167,7 +167,9 @@ function successMessage (bool $successfulUpload) {
  *
  * @param PDO $db PDO connects to the required database
  *
- * @param $id string value
+ * @param $id string value of id in the table
+ *
+ * @return void
  */
 function deleteAboutMeText (PDO $db, string $id) : void {
     $query = $db->prepare("UPDATE `about_me` SET `deleted` = '1' WHERE `id` = '$id';");
