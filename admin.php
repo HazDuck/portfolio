@@ -78,7 +78,7 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
             <input type="submit" name="chooseSub" value="Choose" >
         </form>
         <form action="admin.php" method="POST" id="editForm">
-            <textarea name="edit" type="text" rows="5" cols="50" form="editForm"><?php echo $dropDownSelectionText ?></textarea>
+            <textarea name="edit" type="text" rows="5" cols="50" form="editForm"><?php if (isset($dropDownSelectionText)) { echo $dropDownSelectionText; }?></textarea>
             <?php if (isset($dropdownID)) {
                 echo "<input type= 'hidden' value=" . $dropdownID . " name='editId'>";
             }
