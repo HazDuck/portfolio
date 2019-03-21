@@ -63,7 +63,7 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
         <form action='admin.php' method="POST" id="addForm">
             <textarea name="add" type="text" rows="5" cols="50" form="addForm"></textarea>
             <input type="submit" name="addSub" value="Add" >
-            <?php if (isset($_POST)) {
+            <?php if (isset($successOrFail)) {
                 echo $successOrFail;
             } ?>
         </form>
@@ -71,7 +71,7 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
         <form action="admin.php" method="POST" id="editDropDownForm">
             <select name="editDropdown">
                 <?php
-                if (isset($_POST)) {
+                if (isset($dropdownContents)) {
                     echo $dropdownContents;
                 } ?>
             </select>
@@ -82,12 +82,15 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
             <?php if (isset($dropdownID)) {
                 echo "<input type= 'hidden' value=" . $dropdownID . " name='editId'>";
             }
-            echo $showEditButton; ?>
+            if (isset($showEditButton)) {
+                echo $showEditButton;
+            }
+            ?>
         </form>
             <p>Delete:</p>
         <form action="admin.php" method="POST" id="deleteDropDownForm">
             <select name="deleteDropdown">
-                <?php if (isset($_POST)) {
+                <?php if (isset($dropdownContents)) {
             echo $dropdownContents;
             } ?>
             </select>
