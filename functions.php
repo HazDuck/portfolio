@@ -44,10 +44,10 @@ function printAboutMeInfo(array $infos) : string {
  *
  * @param $postdata array that is required to be passed to the db
  */
-function addAboutMetoDB (PDO $db, string $postdata) : void{
+function addAboutMetoDB (PDO $db, string $postdata) : bool {
     $query = $db->prepare("INSERT INTO `about_me` (`paratext`) VALUES (:text)");
     $query->bindParam(':text', $postdata);
-    $query->execute();
+    return $query->execute();
 }
 
 /**
@@ -56,7 +56,6 @@ function addAboutMetoDB (PDO $db, string $postdata) : void{
  * @param $infos array of db information
  *
  * @return string returns a string that can be printed to show a drop down option or options.
- *
  */
 function fillEditDropDown (array $infos) :string {
     $result = '';
@@ -138,12 +137,24 @@ function checkIfEmpty (string $string) : bool {
 function trimWhiteSpace (string $string) : string {
     return trim($string);
 }
-
+/**
+ *returns a string to display a submit edits button
+ *
+ * @return string inputs for a button called Edit
+ */
 function showButton () : string {
     return '<input type="submit" name="editSub" value="Edit" >';
 }
 
-function successMessage ($successfulUpload) {
+
+/**
+ *provides a success or failure message based on a boolean
+ *
+ * @param bool based on if a db upload is successful
+ *
+ * @return string success or failure message
+ */
+function successMessage (bool $successfulUpload) {
     if ($successfulUpload) {
         return 'Yup- successfully added';
     } else {

@@ -5,23 +5,20 @@
  * Date: 2019-03-18
  * Time: 10:05
  */
+
 require_once 'functions.php';
 require_once 'dbConnectPortfolio.php';
 
 $db = getDbConnection();
-$pullFromDatabase = getAboutMeInfo($db);
-$dropdownContents = fillEditDropDown($pullFromDatabase);
-
 
 if(isset($_POST['addSub'])) {
     $dataFromAdd = $_POST['add'];
     $trimmedText = trimWhiteSpace($dataFromAdd);
     $okToSend= checkIfEmpty($trimmedText);
+    $successOrFail = successMessage($okToSend);
     if ($okToSend) {
-        addAboutMetoDB($db, $trimmedText);
-//        $dave = successMessage($dataFromAdd);
-//        var_dump($dave);
-        header('Location: admin.php');
+        $successfulUpload = addAboutMetoDB($db, $trimmedText);
+        $successOrFail = successMessage($successfulUpload);
     }
 }
 
@@ -36,12 +33,14 @@ if(isset($_POST['editSub'])) {
     $textFromEdit = $_POST['edit'];
     $idFromEdit = $_POST['editId'];
     $trimmedTextEdit = trimWhiteSpace($textFromEdit);
-    $okToEdit= checkIfEmpty($trimmedTextEdit);
+    $okToEdit = checkIfEmpty($trimmedTextEdit);
     if ($okToEdit) {
         editAboutMe($db, $trimmedTextEdit, $idFromEdit);
-        header('Location: admin.php');
     }
 }
+
+$pullFromDatabase = getAboutMeInfo($db);
+$dropdownContents = fillEditDropDown($pullFromDatabase);
 
 ?>
 
@@ -56,12 +55,16 @@ if(isset($_POST['editSub'])) {
 <body>
     <h4>Howdy Pedro</h4>
             <p>Add:</p>
-        <form action='admin.php' method="post" id="addForm">
+        <form action='admin.php' method="POST" id="addForm">
             <textarea name="add" type="text" rows="5" cols="50" form="addForm"></textarea>
             <input type="submit" name="addSub" value="Add" >
+            <?php if (isset($_POST)) {
+                echo $successOrFail;
+            }
+            ?>
         </form>
             <p>Edit:</p>
-        <form action="admin.php" method="post" id="editDropDownForm">
+        <form action="admin.php" method="POST" id="editDropDownForm">
             <select name="editDropdown">
                 <?php
                 if (isset($_POST)) {
@@ -71,8 +74,7 @@ if(isset($_POST['editSub'])) {
             </select>
             <input type="submit" name="chooseSub" value="Choose" >
         </form>
-
-        <form action="admin.php" method="post" id="editForm">
+        <form action="admin.php" method="POST" id="editForm">
             <textarea name="edit" type="text" rows="5" cols="50" form="editForm"><?php echo $dropDownSelectionText ?></textarea>
             <?php
             if (isset($dropdownID)) {
@@ -82,8 +84,9 @@ if(isset($_POST['editSub'])) {
             ?>
         </form>
             <p>Delete:</p>
-        <form action="admin.php" method="post" id="deleteDropDownForm">
-            <select></select>
+        <form action="admin.php" method="POST" id="deleteDropDownForm">
+            <select name="deleteDropdown">
+            </select>
             <input type="submit" name="deleteSub" value="Delete" >
         </form>
 <h4><a href="index.php">Back to page--></a></h4>

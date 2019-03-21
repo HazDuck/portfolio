@@ -133,6 +133,28 @@ class StackTest extends Testcase
         $this->expectException(TypeError::class);
         trimWhiteSpace($input);
     }
+
+    public function testShowButtonSuccess()
+    {
+        $expected = '<input type="submit" name="editSub" value="Edit" >';
+        $case = showButton();
+        $this-> assertEquals($expected, $case);
+    }
+
+    public function testSuccessMessageSuccess()
+    {
+        $expected = 'Yup- successfully added';
+        $input = true;
+        $case = successMessage($input);
+        $this-> assertEquals($expected, $case);
+    }
+
+    public function testSuccessMessageMalf()
+    {
+        $input = ['evil snake'];
+        $this->expectException(TypeError::class);
+        successMessage($input);
+    }
 }
 
 ?>
