@@ -42,7 +42,6 @@ if(isset($_POST['editSub'])) {
 if(isset($_POST['deleteSub'])) {
     $deleteDropdownID = $_POST['deleteDropdown'];
     deleteAboutMeText($db, $deleteDropdownID);
-    header('Location: admin.php');
 }
 
 $pullFromDatabase = getAboutMeInfo($db);
