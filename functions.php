@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: academy
- * Date: 2019-03-18
- * Time: 12:01
- */
+
 /**
  * creates an associative array with the id and text from the requested table
  *
@@ -44,9 +39,9 @@ function printAboutMeInfo(array $infos) : string {
  *
  * @param $postdata array that is required to be passed to the db
  */
-function addAboutMetoDB (PDO $db, string $postdata) : bool {
+function addAboutMetoDB (PDO $db, string $newAboutMeInput) : bool {
     $query = $db->prepare("INSERT INTO `about_me` (`paratext`) VALUES (:text)");
-    $query->bindParam(':text', $postdata);
+    $query->bindParam(':text', $newAboutMeInput);
     return $query->execute();
 }
 
@@ -137,6 +132,7 @@ function checkIfEmpty (string $string) : bool {
 function trimWhiteSpace (string $string) : string {
     return trim($string);
 }
+
 /**
  *returns a string to display a submit edits button
  *
@@ -146,7 +142,6 @@ function showButton () : string {
     return '<input type="submit" name="editSub" value="Edit" >';
 }
 
-
 /**
  *provides a success or failure message based on a boolean
  *
@@ -154,7 +149,7 @@ function showButton () : string {
  *
  * @return string success or failure message
  */
-function successMessage (bool $successfulUpload) {
+function successMessage (bool $successfulUpload) : string {
     if ($successfulUpload) {
         return 'Yup- successfully added';
     } else {

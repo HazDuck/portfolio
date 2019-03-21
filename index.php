@@ -1,12 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: academy
- * Date: 2019-03-18
- * Time: 10:05
- */
+
 require_once 'functions.php';
 require_once 'dbConnectPortfolio.php';
+
 $db = getDbConnection();
 $aboutMeInfo = getAboutMeInfo($db);
 $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);

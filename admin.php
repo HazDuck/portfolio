@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: academy
- * Date: 2019-03-18
- * Time: 10:05
- */
 
 require_once 'functions.php';
 require_once 'dbConnectPortfolio.php';
@@ -14,7 +8,7 @@ $db = getDbConnection();
 if(isset($_POST['addSub'])) {
     $dataFromAdd = $_POST['add'];
     $trimmedText = trimWhiteSpace($dataFromAdd);
-    $okToSend= checkIfEmpty($trimmedText);
+    $okToSend = checkIfEmpty($trimmedText);
     $successOrFail = successMessage($okToSend);
     if ($okToSend) {
         $successfulUpload = addAboutMetoDB($db, $trimmedText);
@@ -61,7 +55,7 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
     <h4>Howdy Pedro</h4>
             <p>Add:</p>
         <form action='admin.php' method="POST" id="addForm">
-            <textarea name="add" type="text" rows="5" cols="50" form="addForm"></textarea>
+            <textarea class ="textbox" name="add" type="text" form="addForm"></textarea>
             <input type="submit" name="addSub" value="Add" >
             <?php if (isset($successOrFail)) {
                 echo $successOrFail;
@@ -75,12 +69,12 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
                     echo $dropdownContents;
                 } ?>
             </select>
-            <input type="submit" name="chooseSub" value="Choose" >
+            <input type="submit" name="chooseSub" value="Chosen Value to Edit" >
         </form>
         <form action="admin.php" method="POST" id="editForm">
-            <textarea name="edit" type="text" rows="5" cols="50" form="editForm"><?php if (isset($dropDownSelectionText)) { echo $dropDownSelectionText; }?></textarea>
+            <textarea class ="textbox" name="edit" type="text" form="editForm"><?php if (isset($dropDownSelectionText)) { echo $dropDownSelectionText; }?></textarea>
             <?php if (isset($dropdownID)) {
-                echo "<input type= 'hidden' value=" . $dropdownID . " name='editId'>";
+                echo "<input type = 'hidden' value=" . $dropdownID . " name='editId'>";
             }
             if (isset($showEditButton)) {
                 echo $showEditButton;

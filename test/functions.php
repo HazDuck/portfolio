@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: academy
- * Date: 2019-03-18
- * Time: 14:00
- */
-require '../functions.php';
+
+require_once '../functions.php';
 
 use PHPUnit\Framework\Testcase;
 
@@ -16,7 +11,7 @@ class StackTest extends Testcase
         $expected = '<p class="about-me-text">cat</p>';
         $input = [['paratext'=>'cat']];
         $case = printAboutMeInfo($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testPrintAboutMeInfoFailure()
@@ -24,7 +19,7 @@ class StackTest extends Testcase
     $expected = '';
     $input = [['paratext'=>[]]];
     $case = printAboutMeInfo($input);
-    $this-> assertEquals($expected, $case);
+    $this->assertEquals($expected, $case);
     }
 
     public function testPrintAboutMeInfoMalf()
@@ -34,12 +29,12 @@ class StackTest extends Testcase
         printAboutMeInfo($input);
     }
 
-    public function testPrintAboutMeInfoFailure2()
+    public function testPrintAboutMeInfoFailureWrongKey()
     {
         $expected = '';
         $input = [['tyhgfg'=>'']];
         $case = printAboutMeInfo($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testfillEditDropDownSuccess()
@@ -47,7 +42,7 @@ class StackTest extends Testcase
         $expected = '<option value=1>cat</option>';
         $input = [['id'=>1, 'paratext'=>'cat']];
         $case = fillEditDropDown($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testfillEditDropDownFailure()
@@ -55,7 +50,7 @@ class StackTest extends Testcase
         $expected = '<option value=1></option>';
         $input = [['id'=>1, 'paratext'=>'']];
         $case = fillEditDropDown($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testfillEditDropDownMalf()
@@ -70,7 +65,7 @@ class StackTest extends Testcase
         $expected = 'dog';
         $input = ['id'=>1, 'paratext'=>'dog'];
         $case = retrieveTextFromArray($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testRetrieveTextFromArrayFailure()
@@ -78,7 +73,7 @@ class StackTest extends Testcase
         $expected = 'cannot be empty';
         $input = ['id'=>1, 'paratext'=>''];
         $case = retrieveTextFromArray($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testRetrieveTextFromArrayMalf()
@@ -93,7 +88,7 @@ class StackTest extends Testcase
         $expected = true;
         $input = 'badger';
         $case = checkIfEmpty($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testcheckIfEmptyFailure()
@@ -101,7 +96,7 @@ class StackTest extends Testcase
         $expected = false;
         $input = '';
         $case = checkIfEmpty($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testcheckIfEmptyMalf()
@@ -116,7 +111,7 @@ class StackTest extends Testcase
         $expected = 'badger';
         $input = '   badger   ';
         $case = trimWhiteSpace($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testTrimWhiteSpaceFailure()
@@ -124,7 +119,7 @@ class StackTest extends Testcase
         $expected = 3;
         $input = 3;
         $case = trimWhiteSpace($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testTrimWhiteSpaceMalf()
@@ -138,7 +133,7 @@ class StackTest extends Testcase
     {
         $expected = '<input type="submit" name="editSub" value="Edit" >';
         $case = showButton();
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testSuccessMessageSuccess()
@@ -146,7 +141,7 @@ class StackTest extends Testcase
         $expected = 'Yup- successfully added';
         $input = true;
         $case = successMessage($input);
-        $this-> assertEquals($expected, $case);
+        $this->assertEquals($expected, $case);
     }
 
     public function testSuccessMessageMalf()
