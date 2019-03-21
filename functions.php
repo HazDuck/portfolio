@@ -171,4 +171,31 @@ function deleteAboutMeText (PDO $db, string $id) : void {
     $query->execute();
 }
 
+/**
+ * takes the give name and the database name and checks to see if they are the same. It also checks that the password provided and the hashed password are the same.
+ *
+ * @param $name string user name provided by the user
+ * @param $pword string password provided by the user
+ * @param $username string password provided by the user
+ * @param $password string hashed password stored in the db
+ * @return bool returns a true if the usernames match and the password provided matches the hashed password on the db
+ */
+function signIn (string $name, string $pword, string $username, string $password) : bool {
+    if ($name == $username && password_verify($pword, $password)){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * @param PDO $db
+ * @return array
+ */
+function getCreds (PDO $db) : array {
+    $query = $db->prepare("SELECT `username`, `password` from `password` WHERE `id` = 1");
+    $query->execute();
+    return $query->fetchAll();
+}
+
 ?>

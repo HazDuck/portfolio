@@ -1,9 +1,20 @@
 <?php
-
 require_once 'functions.php';
 require_once 'dbConnectPortfolio.php';
 
 $db = getDbConnection();
+session_start();
+
+$dbInformation = getCreds($db);
+$dbUsername = $dbInformation[0]['username'];
+$dbPassword = $dbInformation[0]['password'];
+$givenUser = $_POST['userName'];
+$givenPassword = $_POST['password'];
+$signInResult = signIn($givenUser, $givenPassword, $dbUsername, $dbPassword);
+
+if (!$signInResult) {
+    header('Location: signin.php');
+}
 
 if(isset($_POST['addSub'])) {
     $dataFromAdd = $_POST['add'];
