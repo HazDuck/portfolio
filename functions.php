@@ -162,4 +162,16 @@ function successMessage (bool $successfulUpload) {
     }
 }
 
+/**
+ * updates the delete field of the about me table of the provided db to 1
+ *
+ * @param PDO $db PDO connects to the required database
+ *
+ * @param $id string value
+ */
+function deleteAboutMeText (PDO $db, string $id) : void {
+    $query = $db->prepare("UPDATE `about_me` SET `deleted` = '1' WHERE `id` = '$id';");
+    $query->execute();
+}
+
 ?>

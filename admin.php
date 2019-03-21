@@ -39,6 +39,12 @@ if(isset($_POST['editSub'])) {
     }
 }
 
+if(isset($_POST['deleteSub'])) {
+    $deleteDropdownID = $_POST['deleteDropdown'];
+    deleteAboutMeText($db, $deleteDropdownID);
+    header('Location: admin.php');
+}
+
 $pullFromDatabase = getAboutMeInfo($db);
 $dropdownContents = fillEditDropDown($pullFromDatabase);
 
@@ -60,8 +66,7 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
             <input type="submit" name="addSub" value="Add" >
             <?php if (isset($_POST)) {
                 echo $successOrFail;
-            }
-            ?>
+            } ?>
         </form>
             <p>Edit:</p>
         <form action="admin.php" method="POST" id="editDropDownForm">
@@ -69,23 +74,23 @@ $dropdownContents = fillEditDropDown($pullFromDatabase);
                 <?php
                 if (isset($_POST)) {
                     echo $dropdownContents;
-                }
-                ?>
+                } ?>
             </select>
             <input type="submit" name="chooseSub" value="Choose" >
         </form>
         <form action="admin.php" method="POST" id="editForm">
             <textarea name="edit" type="text" rows="5" cols="50" form="editForm"><?php echo $dropDownSelectionText ?></textarea>
-            <?php
-            if (isset($dropdownID)) {
+            <?php if (isset($dropdownID)) {
                 echo "<input type= 'hidden' value=" . $dropdownID . " name='editId'>";
             }
-            echo $showEditButton;
-            ?>
+            echo $showEditButton; ?>
         </form>
             <p>Delete:</p>
         <form action="admin.php" method="POST" id="deleteDropDownForm">
             <select name="deleteDropdown">
+                <?php if (isset($_POST)) {
+            echo $dropdownContents;
+            } ?>
             </select>
             <input type="submit" name="deleteSub" value="Delete" >
         </form>
