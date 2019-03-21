@@ -5,53 +5,47 @@ require_once 'dbConnectPortfolio.php';
 $db = getDbConnection();
 session_start();
 
-$dbInformation = getCreds($db);
-$dbUsername = $dbInformation[0]['username'];
-$dbPassword = $dbInformation[0]['password'];
-$givenUser = $_POST['userName'];
-$givenPassword = $_POST['password'];
-$signInResult = signIn($givenUser, $givenPassword, $dbUsername, $dbPassword);
+if($_SESSION['log'] == true) {
 
-if (!$signInResult) {
-    header('Location: signin.php');
-}
-
-if(isset($_POST['addSub'])) {
-    $dataFromAdd = $_POST['add'];
-    $trimmedText = trimWhiteSpace($dataFromAdd);
-    $okToSend = checkIfEmpty($trimmedText);
-    $successOrFail = successMessage($okToSend);
-    if ($okToSend) {
-        $successfulUpload = addAboutMetoDB($db, $trimmedText);
-        $successOrFail = successMessage($successfulUpload);
+    if (isset($_POST['addSub'])) {
+        $dataFromAdd = $_POST['add'];
+        $trimmedText = trimWhiteSpace($dataFromAdd);
+        $okToSend = checkIfEmpty($trimmedText);
+        $successOrFail = successMessage($okToSend);
+        if ($okToSend) {
+            $successfulUpload = addAboutMetoDB($db, $trimmedText);
+            $successOrFail = successMessage($successfulUpload);
+        }
     }
-}
 
-if(isset($_POST['chooseSub'])) {
-    $dropdownID = $_POST['editDropdown'];
-    $dropDownSelectionFullArray = getChosenTextToEdit($db, $dropdownID);
-    $dropDownSelectionText = retrieveTextFromArray($dropDownSelectionFullArray);
-    $showEditButton = showButton();
-}
-
-if(isset($_POST['editSub'])) {
-    $textFromEdit = $_POST['edit'];
-    $idFromEdit = $_POST['editId'];
-    $trimmedTextEdit = trimWhiteSpace($textFromEdit);
-    $okToEdit = checkIfEmpty($trimmedTextEdit);
-    if ($okToEdit) {
-        editAboutMe($db, $trimmedTextEdit, $idFromEdit);
+    if (isset($_POST['chooseSub'])) {
+        $dropdownID = $_POST['editDropdown'];
+        $dropDownSelectionFullArray = getChosenTextToEdit($db, $dropdownID);
+        $dropDownSelectionText = retrieveTextFromArray($dropDownSelectionFullArray);
+        $showEditButton = showButton();
     }
+
+    if (isset($_POST['editSub'])) {
+        $textFromEdit = $_POST['edit'];
+        $idFromEdit = $_POST['editId'];
+        $trimmedTextEdit = trimWhiteSpace($textFromEdit);
+        $okToEdit = checkIfEmpty($trimmedTextEdit);
+        if ($okToEdit) {
+            editAboutMe($db, $trimmedTextEdit, $idFromEdit);
+        }
+    }
+
+    if (isset($_POST['deleteSub'])) {
+        $deleteDropdownID = $_POST['deleteDropdown'];
+        deleteAboutMeText($db, $deleteDropdownID);
+    }
+
+    $pullFromDatabase = getAboutMeInfo($db);
+    $dropdownContents = fillEditDropDown($pullFromDatabase);
+
+} else {
+    header('location: signin.php');
 }
-
-if(isset($_POST['deleteSub'])) {
-    $deleteDropdownID = $_POST['deleteDropdown'];
-    deleteAboutMeText($db, $deleteDropdownID);
-}
-
-$pullFromDatabase = getAboutMeInfo($db);
-$dropdownContents = fillEditDropDown($pullFromDatabase);
-
 ?>
 
 <!DOCTYPE html>
