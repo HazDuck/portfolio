@@ -211,7 +211,7 @@ function getCreds (PDO $db) : array {
  * @param $sessionStatus mixed value to test
  * @return bool returns true if it is true and false if not
  */
-function testSession ($sessionStatus) : bool {
+function testSession ($sessionStatus) {
     if ($sessionStatus) {
         return true;
     }
