@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.43)
 # Database: portfolio
-# Generation Time: 2019-03-15 16:56:55 +0000
+# Generation Time: 2019-03-21 10:32:10 +0000
 # ************************************************************
 
 
@@ -32,6 +32,17 @@ CREATE TABLE `about_me` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `about_me` WRITE;
+/*!40000 ALTER TABLE `about_me` DISABLE KEYS */;
+
+INSERT INTO `about_me` (`id`, `paratext`, `deleted`)
+VALUES
+	(1,'I?m currently improving my skills as a Full Stack developer.\r\n    I have a diverse career background including working as part of the Product Owner team for Cancer Research UK?s flagship product ?Race for Life?, teaching English in Tokyo, and helping a small Cornish company create an app for their staff.\r\n ',0),
+	(280,'bobby',1),
+	(281,'Cat',0);
+
+/*!40000 ALTER TABLE `about_me` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
