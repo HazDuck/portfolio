@@ -186,9 +186,10 @@ a img {
 }
 
 .about {
+    overflow: auto;
     background-color: #000000;
     background-image: -webkit-linear-gradient(30deg, #000000 55%, #FA255E 55%);
-    height: 650px;
+    min-height: 650px;
 }
 
 .about-me-area {
