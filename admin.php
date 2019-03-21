@@ -5,14 +5,43 @@
  * Date: 2019-03-18
  * Time: 10:05
  */
+
 require_once 'functions.php';
 require_once 'dbConnectPortfolio.php';
 
-if(isset($_POST['add'])) {
-    $db = getDbConnection();
+$db = getDbConnection();
+
+if(isset($_POST['addSub'])) {
     $dataFromAdd = $_POST['add'];
-    addAboutMetoDB($db, $dataFromAdd);
+    $trimmedText = trimWhiteSpace($dataFromAdd);
+    $okToSend= checkIfEmpty($trimmedText);
+    $successOrFail = successMessage($okToSend);
+    if ($okToSend) {
+        $successfulUpload = addAboutMetoDB($db, $trimmedText);
+        $successOrFail = successMessage($successfulUpload);
+    }
 }
+
+if(isset($_POST['chooseSub'])) {
+    $dropdownID = $_POST['editDropdown'];
+    $dropDownSelectionFullArray = getChosenTextToEdit($db, $dropdownID);
+    $dropDownSelectionText = retrieveTextFromArray($dropDownSelectionFullArray);
+    $showEditButton = showButton();
+}
+
+if(isset($_POST['editSub'])) {
+    $textFromEdit = $_POST['edit'];
+    $idFromEdit = $_POST['editId'];
+    $trimmedTextEdit = trimWhiteSpace($textFromEdit);
+    $okToEdit = checkIfEmpty($trimmedTextEdit);
+    if ($okToEdit) {
+        editAboutMe($db, $trimmedTextEdit, $idFromEdit);
+    }
+}
+
+$pullFromDatabase = getAboutMeInfo($db);
+$dropdownContents = fillEditDropDown($pullFromDatabase);
+
 ?>
 
 <!DOCTYPE html>
@@ -25,18 +54,40 @@ if(isset($_POST['add'])) {
 </head>
 <body>
     <h4>Howdy Pedro</h4>
-        <form action='' method="post">
             <p>Add:</p>
-            <textarea name="add" type="text" rows="5" cols="50"></textarea>
-            <input type="submit" value="Add" name="addSub">
-            <p>Edit:</p>
-            <select></select>
-            <input type="submit" value="Choose" name="chooseSub">
-            <textarea name="edit" type="text" rows="5" cols="50"></textarea>
-            <input type="submit" value="Edit" name="editSub">
-            <p>Delete:</p>
-            <select></select>
-            <input type="submit" value="Delete" name="deleteSub">
+        <form action='admin.php' method="POST" id="addForm">
+            <textarea name="add" type="text" rows="5" cols="50" form="addForm"></textarea>
+            <input type="submit" name="addSub" value="Add" >
+            <?php if (isset($_POST)) {
+                echo $successOrFail;
+            }
+            ?>
         </form>
-<h4><a href="">Back to page--></a></h4>
+            <p>Edit:</p>
+        <form action="admin.php" method="POST" id="editDropDownForm">
+            <select name="editDropdown">
+                <?php
+                if (isset($_POST)) {
+                    echo $dropdownContents;
+                }
+                ?>
+            </select>
+            <input type="submit" name="chooseSub" value="Choose" >
+        </form>
+        <form action="admin.php" method="POST" id="editForm">
+            <textarea name="edit" type="text" rows="5" cols="50" form="editForm"><?php echo $dropDownSelectionText ?></textarea>
+            <?php
+            if (isset($dropdownID)) {
+                echo "<input type= 'hidden' value=" . $dropdownID . " name='editId'>";
+            }
+            echo $showEditButton;
+            ?>
+        </form>
+            <p>Delete:</p>
+        <form action="admin.php" method="POST" id="deleteDropDownForm">
+            <select name="deleteDropdown">
+            </select>
+            <input type="submit" name="deleteSub" value="Delete" >
+        </form>
+<h4><a href="index.php">Back to page--></a></h4>
 </body>
