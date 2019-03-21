@@ -86,19 +86,6 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
         <div class="about-me-area">
             <?php echo $showAboutMeInfo; ?>
         </div>
-        <div class="about-me-pics-container">
-            <div class="about-me-pics area1">
-                <div class="about-me-pic me1"></div>
-            </div>
-            <div class="about-me-pics area1">
-                <div class="about-me-pic me2"></div>
-            </div>
-        </div>
-        <div class="about-me-pics-container">
-            <div class="about-me-pics area2">
-                <div class="about-me-pic me3"></div>
-            </div>
-        </div>
     </main>
     <main id="contact" class="contact">
         <h4 class="brand">Get in Contact</h4>
