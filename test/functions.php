@@ -150,6 +150,28 @@ class StackTest extends Testcase
         $this->expectException(TypeError::class);
         successMessage($input);
     }
+
+    public function testSignInSuccess()
+    {
+        $expected = false;
+        $input = "cat";
+        $input2 = "dog";
+        $input3 = "cat";
+        $input4 = "dog";
+        $case = signIn($input, $input2, $input3, $input4);
+        $this->assertEquals($expected, $case);
+    }
+
+
+    public function testSignInMalf()
+    {
+        $input = ['evil snake'];
+        $input2 = "dog";
+        $input3 = "cat";
+        $input4 = "dog";
+        $this->expectException(TypeError::class);
+        signIn($input, $input2, $input3, $input4);
+    }
 }
 
 ?>
