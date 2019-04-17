@@ -17,6 +17,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/function.js" defer></script>
 </head>
 <body>
     <div class="split1">
@@ -27,11 +28,19 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <li><a href="#about" class="link">About Me</a></li>
                 <li><a href="#contact" class="link">Contact</a></li>
             </ul>
-                <img class="ham" src="img/bars.svg"/>
+                <img id="hamMenu" class="ham" src="img/bars.svg"/>
             <div class="icons-container">
                 <a href="https://github.com/HazDuck" target="_blank"><img src="img/github.png"/></a>
                 <a href="https://twitter.com/peteheyes" target="_blank"><img src="img/twitter.png"/></a>
                 <a href="https://uk.linkedin.com/in/pete-heyes-b7b98985" target="_blank"><img src="img/in.png"/></a>
+            </div>
+            <div id="dropDownNav" class="dropDownOptionsArea hide-dropDown">
+                <ul>
+                    <li class="dropDownOptions"><a href="#home" class="link brand">Home</a></li>
+                    <li class="dropDownOptions"><a href="#portfolio" class="link brand">Portfolio</a></li>
+                    <li class="dropDownOptions"><a href="#about" class="link brand">About Me</a></li>
+                    <li class="dropDownOptions"><a href="#contact" class="link brand">Contact</a></li>
+                </ul>
             </div>
         </nav>
         <main id="home" class="home">

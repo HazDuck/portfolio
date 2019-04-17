@@ -55,6 +55,21 @@ a img {
     font-size: 1.6rem;
 }
 
+.dropDownOptionsArea {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 95px;
+    height: 120px;
+    background-color: white;
+}
+
+.dropDownOptions {
+    margin-top: 10px;
+    text-align: center;
+    list-style-type: none;
+}
+
 .link {
     text-decoration: none;
 }
@@ -150,6 +165,10 @@ a img {
 }
 
 .hide {
+    display: none;
+}
+
+.hide-dropDown {
     display: none;
 }
 
