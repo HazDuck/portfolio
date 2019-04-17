@@ -17,6 +17,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/function.js" defer></script>
 </head>
 <body>
     <div class="split1">
