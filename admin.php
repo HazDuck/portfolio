@@ -1,11 +1,15 @@
 <?php
-
 require_once 'functions.php';
 require_once 'dbConnectPortfolio.php';
 
 $db = getDbConnection();
+session_start();
+$sessionStatus = testSession($_SESSION['log']);
+if(!$sessionStatus) {
+    header('location: signin.php');
+    }
 
-if(isset($_POST['addSub'])) {
+if (isset($_POST['addSub'])) {
     $dataFromAdd = $_POST['add'];
     $trimmedText = trimWhiteSpace($dataFromAdd);
     $okToSend = checkIfEmpty($trimmedText);
@@ -16,14 +20,14 @@ if(isset($_POST['addSub'])) {
     }
 }
 
-if(isset($_POST['chooseSub'])) {
+if (isset($_POST['chooseSub'])) {
     $dropdownID = $_POST['editDropdown'];
     $dropDownSelectionFullArray = getChosenTextToEdit($db, $dropdownID);
     $dropDownSelectionText = retrieveTextFromArray($dropDownSelectionFullArray);
     $showEditButton = showButton();
 }
 
-if(isset($_POST['editSub'])) {
+if (isset($_POST['editSub'])) {
     $textFromEdit = $_POST['edit'];
     $idFromEdit = $_POST['editId'];
     $trimmedTextEdit = trimWhiteSpace($textFromEdit);
@@ -33,7 +37,7 @@ if(isset($_POST['editSub'])) {
     }
 }
 
-if(isset($_POST['deleteSub'])) {
+if (isset($_POST['deleteSub'])) {
     $deleteDropdownID = $_POST['deleteDropdown'];
     deleteAboutMeText($db, $deleteDropdownID);
 }
