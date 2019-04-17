@@ -56,7 +56,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port1"></div>
                 <div class="port-text"><p>Responsive Web Design</p></div>
                 <div class="port-links">
-                    <button class="demo">Demo</button>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/Pilot/"><button class="demo">Demo</button></a>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
@@ -77,6 +77,30 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 </div>
             </div>
             <div class="port-area hide">
+                <div class="port-pic port2"></div>
+                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-links">
+                    <button class="demo">Demo</button>
+                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
+                <div class="port-pic port2"></div>
+                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-links">
+                    <button class="demo">Demo</button>
+                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
+                <div class="port-pic port2"></div>
+                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-links">
+                    <button class="demo">Demo</button>
+                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
                 <div class="port-pic port2"></div>
                 <div class="port-text"><p>Coming Soon</p></div>
                 <div class="port-links">

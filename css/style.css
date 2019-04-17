@@ -127,14 +127,14 @@ a img {
 
 .portfolio {
     background-color: #FFFFFF;
-    height: 650px;
+    overflow: auto;
+    margin-bottom: 35px;
 }
 
 .port-container {
     width: 98%;
     margin: 0 auto;
     padding-top: 50px;
-    overflow: auto;
 }
 
 .port-area {
@@ -296,9 +296,6 @@ a img {
         width: 250px;
         height: 250px;
     }
-    .portfolio{
-        height: 550px;
-    }
 
 }
 @media only screen and (max-width: 1000px) {
@@ -308,10 +305,6 @@ a img {
 
     .hide {
         display: block;
-    }
-
-    .portfolio {
-        height: 900px;
     }
 
     .about {
@@ -354,10 +347,6 @@ a img {
 
     .port-area {
         width: 100%;
-    }
-
-    .portfolio {
-        height: 1650px;
     }
 
     .about-me-pics-container {
