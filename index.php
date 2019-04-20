@@ -56,6 +56,9 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port1"></div>
                 <div class="port-text"><p>Responsive Web Design</p></div>
                 <div class="port-links">
+                    <div class="description">
+                        <p class="brand">Info: cape browsers and the startup discs that EarthLink and AOL tucked in mailboxes discs that EarthLink and AOL tucked in mailboxes</p>
+                    </div>
                     <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/Pilot/" target="_blank"><button class="demo">Demo</button></a>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
@@ -64,6 +67,9 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port3"></div>
                 <div class="port-text"><p>Coming Soon</p></div>
                 <div class="port-links">
+                    <div class="description">
+                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                    </div>
                     <button class="demo">Demo</button>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
@@ -72,14 +78,9 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port2"></div>
                 <div class="port-text"><p>Coming Soon</p></div>
                 <div class="port-links">
-                    <button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
-                </div>
-            </div>
-            <div class="port-area hide">
-                <div class="port-pic port2"></div>
-                <div class="port-text"><p>Coming Soon</p></div>
-                <div class="port-links">
+                    <div class="description">
+                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                    </div>
                     <button class="demo">Demo</button>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
@@ -88,6 +89,9 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port2"></div>
                 <div class="port-text"><p>Coming Soon</p></div>
                 <div class="port-links">
+                    <div class="description">
+                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                    </div>
                     <button class="demo">Demo</button>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
@@ -96,6 +100,9 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port2"></div>
                 <div class="port-text"><p>Coming Soon</p></div>
                 <div class="port-links">
+                    <div class="description">
+                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                    </div>
                     <button class="demo">Demo</button>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
@@ -104,6 +111,9 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port2"></div>
                 <div class="port-text"><p>Coming Soon</p></div>
                 <div class="port-links">
+                    <div class="description">
+                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                    </div>
                     <button class="demo">Demo</button>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
@@ -113,7 +123,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
     <main id="about" class="about">
         <h4>A Little Bit About Me</h4>
         <div class="about-me-area">
-            <?php echo $showAboutMeInfo; ?>
+            <?php echo $showAboutMeInfo;?>
         </div>
     </main>
     <main id="contact" class="contact">

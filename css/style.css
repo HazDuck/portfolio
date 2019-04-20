@@ -152,6 +152,11 @@ a img {
     background-size: cover;
 }
 
+.description {
+    height: 100px;
+    text-align: center;
+}
+
 .port1 {
      background-image: url("../img/pilot.png");
  }
