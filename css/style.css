@@ -196,6 +196,7 @@ a img {
     color: #FFFFFF;
     font-size: 1rem;
     border: none;
+    cursor: pointer;
 }
 
 .link-to-code {
@@ -208,7 +209,7 @@ a img {
     overflow: auto;
     background-color: #000000;
     background-image: -webkit-linear-gradient(30deg, #000000 55%, #FA255E 55%);
-    min-height: 750px;
+    /*min-height: 750px;*/
 }
 
 .about-me-area {
@@ -216,7 +217,7 @@ a img {
 }
 
 .about-me-text {
-    margin: 5% 5% 5% 10%;
+    margin: 10% 5% 30% 15%;
     font-size: 1.4rem;
     float: left;
 }
@@ -284,12 +285,12 @@ a img {
 }
 
 
-@media only screen and (max-width: 1275px) {
-    .about-me-pics-container div:nth-child(2) {
-        display: none;
-    }
+/*@media only screen and (max-width: 1275px) {*/
+    /*!*.about-me-pics-container div:nth-child(2) {*!*/
+        /*!*display: none;*!*/
+    /*!*}*!*/
 
-}
+/*}*/
 
 @media only screen and (max-width: 1150px) {
     .port-pic {
@@ -310,7 +311,7 @@ a img {
     .about {
         overflow: auto;
         background-image:none;
-        min-height: 800px;
+        /*min-height: 800px;*/
     }
 
     .about-me-area {
@@ -322,7 +323,7 @@ a img {
     }
 
     .about-me-text {
-        margin: 3%;
+        margin: 10%;
         font-size: 1.2rem;
     }
 }

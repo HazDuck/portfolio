@@ -56,7 +56,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-pic port1"></div>
                 <div class="port-text"><p>Responsive Web Design</p></div>
                 <div class="port-links">
-                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/Pilot/"><button class="demo">Demo</button></a>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/Pilot/" target="_blank"><button class="demo">Demo</button></a>
                     <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
