@@ -57,65 +57,63 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-text"><p>Responsive Web Design</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">Info: cape browsers and the startup discs that EarthLink and AOL tucked in mailboxes discs that EarthLink and AOL tucked in mailboxes</p>
+                        <p class="brand">I recreated a website using responsive web design. Product information is pulled from a JSON file and templated using Handlebars.js</p>
                     </div>
-                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/Pilot/" target="_blank"><button class="demo">Demo</button></a>
-                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/pilotupdate/gulppilot/" target="_blank"><button class="demo">Demo</button></a>
+                    <a href="https://github.com/HazDuck/pilotshop" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
                 <div class="port-pic port3"></div>
-                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-text"><p>Paint App</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                        <p class="brand">Using scrum I worked as part of a team create a painting game. The game was built using Javascript according to the specifications of our Product Owner.</p>
                     </div>
-                    <button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="http://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/" target="_blank"><button class="demo">Demo</button></a>
                 </div>
             </div>
             <div class="port-area">
-                <div class="port-pic port2"></div>
-                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-pic port4"></div>
+                <div class="port-text"><p>Pomodoro Clock</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                        <p class="brand">I created a pomodoro clock using Vanilla JS.</p>
                     </div>
-                    <button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/pomodoro" target="_blank"><button class="demo">Demo</button>
+                    <a href="https://github.com/HazDuck/pomodoro" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
-                <div class="port-pic port2"></div>
-                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-pic port5"></div>
+                <div class="port-text"><p>Aptitude Test</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                        <p class="brand">Working as part of a team we added search and filter functionality to an existing code base.</p>
                     </div>
-                    <button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="https://dev.maydenacademy.co.uk/projects/2017/aptitude-test/app/" target="_blank"><button class="demo">Demo</button></a>
                 </div>
             </div>
             <div class="port-area">
-                <div class="port-pic port2"></div>
-                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-pic port6"></div>
+                <div class="port-text"><p>Post and Rails</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                        <p class="brand">Using PHP I created a one page application to display the length of a fence based on the materials available.</p>
                     </div>
-                    <button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/postmaster3000" target="_blank"><button class="demo">Demo</button>
+                    <a href="https://github.com/HazDuck/postmaster3000" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
-                <div class="port-pic port2"></div>
-                <div class="port-text"><p>Coming Soon</p></div>
+                <div class="port-pic port7"></div>
+                <div class="port-text"><p>Solar System</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">I'm currently working on further projects. In the meantime please enjoy this picture of a friendly dog.</p>
+                        <p class="brand">I created an animated SVG to replicate the solar system (plus the Death Star).</p>
                     </div>
-                    <button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/solar" target="_blank"><button class="demo">Demo</button>
+                    <a href="https://github.com/HazDuck/solarSystem" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
         </div>

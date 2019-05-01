@@ -140,6 +140,7 @@ a img {
 .port-area {
     width: 33.3%;
     float: left;
+    margin-bottom: 50px;
 }
 
 .port-pic {
@@ -153,20 +154,48 @@ a img {
 }
 
 .description {
-    height: 100px;
+    height: 125px;
     text-align: center;
 }
 
 .port1 {
      background-image: url("../img/pilot.png");
- }
+    background-size: cover;
+    background-position: center;
+}
 
 .port2 {
     background-image: url("../img/cs.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .port3 {
-    background-image: url("../img/cs.jpg");
+    background-image: url("../img/pm2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.port4 {
+    background-image: url("../img/pom13.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.port5 {
+    background-image: url("../img/apt.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.port6 {
+    background-image: url("../img/pr2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.port7 {
+    background-image: url("../img/ss.png");
 }
 
 .hide {
