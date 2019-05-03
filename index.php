@@ -46,7 +46,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
         <main id="home" class="home">
             <p class="headline gutter">Hi I'm Pete...</p>
             <div class="portrait"></div>
-            <p class="quote gutter">Full Stack Web Developer (TBC) based in Bath</p>
+            <p class="quote gutter">Full Stack Web Developer based in Bath</p>
         </main>
     </div>
     <main id="portfolio" class="portfolio">
@@ -68,9 +68,10 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-text"><p>Paint App</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">Using scrum I worked as part of a team create a painting game. The game was built using Javascript according to the specifications of our Product Owner.</p>
+                        <p class="brand">I worked as part of a team create a painting app. The app was built using Javascript according to the specifications of our Product Owner.</p>
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/projects/2019Feb/2019-paint-app/" target="_blank"><button class="demo">Demo</button></a>
+                    <a href="https://github.com/Mayden-Academy/2019-paint-app" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
@@ -91,7 +92,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                     <div class="description">
                         <p class="brand">Working as part of a team we added search and filter functionality to an existing code base.</p>
                     </div>
-                    <a href="https://dev.maydenacademy.co.uk/projects/2017/aptitude-test/app/" target="_blank"><button class="demo">Demo</button></a>
+                    <a href="https://github.com/Mayden-Academy/aptitude-test" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
