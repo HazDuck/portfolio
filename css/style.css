@@ -198,6 +198,19 @@ a img {
     background-image: url("../img/ss.png");
 }
 
+.port8 {
+    background-image: url("../img/cs.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.port9 {
+    background-image: url("../img/td.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
 .hide {
     display: none;
 }
