@@ -132,14 +132,14 @@ a img {
 }
 
 .port-container {
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 50px;
 }
 
 .port-area {
     width: 33.3%;
-    float: left;
+    float: right;
     margin-bottom: 50px;
 }
 
@@ -210,6 +210,17 @@ a img {
     background-position: center;
 }
 
+.port10 {
+    background-image: url("../img/bond.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.port11 {
+    background-image: url("../img/milk.png");
+    background-size: cover;
+    background-position: center;
+}
 
 .hide {
     display: none;
@@ -249,6 +260,12 @@ a img {
 .link-to-code {
     width: 40px;
     float: right;
+    margin-top: 5px;
+}
+
+.link-to-code2 {
+    width: 40px;
+    float: left;
     margin-top: 5px;
 }
 
@@ -331,14 +348,6 @@ a img {
     display: block;
 }
 
-
-/*@media only screen and (max-width: 1275px) {*/
-    /*!*.about-me-pics-container div:nth-child(2) {*!*/
-        /*!*display: none;*!*/
-    /*!*}*!*/
-
-/*}*/
-
 @media only screen and (max-width: 1150px) {
     .port-pic {
         width: 250px;
@@ -347,10 +356,6 @@ a img {
 
 }
 @media only screen and (max-width: 1000px) {
-    .port-area {
-        width: 50%;
-    }
-
     .hide {
         display: block;
     }
@@ -358,7 +363,6 @@ a img {
     .about {
         overflow: auto;
         background-image:none;
-        /*min-height: 800px;*/
     }
 
     .about-me-area {

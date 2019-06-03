@@ -51,18 +51,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
     </div>
     <main id="portfolio" class="portfolio">
         <h4 class="brand">My Projects</h4>
-        <div class="port-container">
-            <div class="port-area">
-                <div class="port-pic port1"></div>
-                <div class="port-text"><p>Responsive Web Design</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand">I recreated a website using responsive web design. Product information is pulled from a JSON file and templated using Handlebars.js</p>
-                    </div>
-                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/pilotupdate/gulppilot/" target="_blank"><button class="demo">Demo</button></a>
-                    <a href="https://github.com/HazDuck/pilotshop" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
-                </div>
-            </div>
+<!--        <div class="port-container">-->
             <div class="port-area">
                 <div class="port-pic port9"></div>
                 <div class="port-text"><p>Top Dog</p></div>
@@ -72,6 +61,17 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/projects/2019Feb/2019-nmr-TopDog/" target="_blank"><button class="demo">Demo</button>
                         <a href="https://github.com/Mayden-Academy/2019-nmr-TopDog" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
+                <div class="port-pic port10"></div>
+                <div class="port-text"><p>Bond Fight</p></div>
+                <div class="port-links">
+                    <div class="description">
+                        <p class="brand">A team project to compare Bond films. We built an API using Node with a MongoDB database that makes calls using React. (The below link will open both repositories).</p>
+                    </div>
+                    <a href="#" onclick="window.open('https://github.com/Mayden-Academy/2019-react-bond-fight');
+    window.open('https://github.com/Mayden-Academy/2019-nodeApi-bondFight');"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
@@ -86,14 +86,14 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 </div>
             </div>
             <div class="port-area">
-                <div class="port-pic port4"></div>
-                <div class="port-text"><p>Pomodoro Clock</p></div>
+                <div class="port-pic port1"></div>
+                <div class="port-text"><p>Responsive Web Design</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">I created a pomodoro clock using Vanilla JS.</p>
+                        <p class="brand">I recreated a website using responsive web design. Product information templated using Handlebars.js</p>
                     </div>
-                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/pomodoro" target="_blank"><button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck/pomodoro" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/pilotupdate/gulppilot/" target="_blank"><button class="demo">Demo</button></a>
+                    <a href="https://github.com/HazDuck/pilotshop" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
@@ -107,6 +107,27 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 </div>
             </div>
             <div class="port-area">
+                <div class="port-pic port11"></div>
+                <div class="port-text"><p>Milko-Crypto</p></div>
+                <div class="port-links">
+                    <div class="description">
+                        <p class="brand">An app that calls two API's and lets users know how many Bitcoin they'd need to fill a swimming pool with milk.</p>
+                    </div>
+                    <a href="https://github.com/HazDuck/bitcoinAndMilk" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
+                <div class="port-pic port4"></div>
+                <div class="port-text"><p>Pomodoro Clock</p></div>
+                <div class="port-links">
+                    <div class="description">
+                        <p class="brand">I created a pomodoro clock using Vanilla JS.</p>
+                    </div>
+                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/pomodoro" target="_blank"><button class="demo">Demo</button>
+                    <a href="https://github.com/HazDuck/pomodoro" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
                 <div class="port-pic port7"></div>
                 <div class="port-text"><p>Solar System</p></div>
                 <div class="port-links">
@@ -114,39 +135,10 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                         <p class="brand">I created an animated SVG to replicate the solar system (plus the Death Star).</p>
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/solar" target="_blank"><button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck/solarSystem" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                        <a href="https://github.com/HazDuck/solarSystem" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
-            <div class="port-area">
-                <div class="port-pic port6"></div>
-                <div class="port-text"><p>Post and Rails</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand">Using PHP I created a one page application to display the length of a fence based on the materials available.</p>
-                    </div>
-                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/postmaster3000" target="_blank"><button class="demo">Demo</button>
-                        <a href="https://github.com/HazDuck/postmaster3000" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
-                </div>
-            </div>
-            <div class="port-area">
-                <div class="port-pic port8"></div>
-                <div class="port-text"><p>Coming Soon...</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="port-area">
-                <div class="port-pic port8"></div>
-                <div class="port-text"><p>Coming Soon...</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        </div>-->
     </main>
     <main id="about" class="about">
         <h4>A Little Bit About Me</h4>
