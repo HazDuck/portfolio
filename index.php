@@ -53,7 +53,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
         <h4 class="brand">My Projects</h4>
         <div class="port-container">
             <div class="port-area">
-                <div class="port-pic port9"></div>
+                <div class="port-pic port10"></div>
                 <div class="port-text"><p>Bond Fight</p></div>
                 <div class="port-links">
                     <div class="description">
@@ -107,7 +107,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 </div>
             </div>
             <div class="port-area">
-                <div class="port-pic port9"></div>
+                <div class="port-pic port11"></div>
                 <div class="port-text"><p>Milko-Crypto</p></div>
                 <div class="port-links">
                     <div class="description">
