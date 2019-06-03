@@ -210,6 +210,17 @@ a img {
     background-position: center;
 }
 
+.port10 {
+    background-image: url("../img/bond.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.port11 {
+    background-image: url("../img/milk.png");
+    background-size: cover;
+    background-position: center;
+}
 
 .hide {
     display: none;
