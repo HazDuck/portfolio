@@ -53,7 +53,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
         <h4 class="brand">My Projects</h4>
         <div class="port-container">
             <div class="port-area">
-                <div class="port-pic port10"></div>
+                <div class="port-pic port9"></div>
                 <div class="port-text"><p>Bond Fight</p></div>
                 <div class="port-links">
                     <div class="description">
@@ -107,7 +107,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 </div>
             </div>
             <div class="port-area">
-                <div class="port-pic port11"></div>
+                <div class="port-pic port9"></div>
                 <div class="port-text"><p>Milko-Crypto</p></div>
                 <div class="port-links">
                     <div class="description">
@@ -136,15 +136,6 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/solar" target="_blank"><button class="demo">Demo</button>
                     <a href="https://github.com/HazDuck/solarSystem" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
-                </div>
-            </div>
-            <div class="port-area">
-                <div class="port-pic port8"></div>
-                <div class="port-text"><p>Coming Soon...</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand"></p>
-                    </div>
                 </div>
             </div>
         </div>
