@@ -111,7 +111,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-text"><p>Milko-Crypto</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">This application calls an API to find the live Bitcoin price and a second API to find different milk products. It then informs users how many Bitcoin they'd need to fill a swimming pool with milk.</p>
+                        <p class="brand">An app that calls two API's and lets users know how many Bitcoin they'd need to fill a swimming pool with milk.</p>
                     </div>
                     <a href="https://github.com/HazDuck/bitcoinAndMilk" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
