@@ -132,14 +132,14 @@ a img {
 }
 
 .port-container {
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 50px;
 }
 
 .port-area {
     width: 33.3%;
-    float: right;
+    float: left;
     margin-bottom: 50px;
 }
 
@@ -350,14 +350,6 @@ a img {
     display: block;
 }
 
-
-/*@media only screen and (max-width: 1275px) {*/
-    /*!*.about-me-pics-container div:nth-child(2) {*!*/
-        /*!*display: none;*!*/
-    /*!*}*!*/
-
-/*}*/
-
 @media only screen and (max-width: 1150px) {
     .port-pic {
         width: 250px;
@@ -366,10 +358,6 @@ a img {
 
 }
 @media only screen and (max-width: 1000px) {
-    .port-area {
-        width: 50%;
-    }
-
     .hide {
         display: block;
     }
@@ -377,7 +365,6 @@ a img {
     .about {
         overflow: auto;
         background-image:none;
-        /*min-height: 800px;*/
     }
 
     .about-me-area {

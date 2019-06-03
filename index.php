@@ -51,7 +51,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
     </div>
     <main id="portfolio" class="portfolio">
         <h4 class="brand">My Projects</h4>
-        <div class="port-container">
+<!--        <div class="port-container">-->
             <div class="port-area">
                 <div class="port-pic port9"></div>
                 <div class="port-text"><p>Top Dog</p></div>
@@ -135,10 +135,10 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                         <p class="brand">I created an animated SVG to replicate the solar system (plus the Death Star).</p>
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/solar" target="_blank"><button class="demo">Demo</button>
-                    <a href="https://github.com/HazDuck/solarSystem" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                        <a href="https://github.com/HazDuck/solarSystem" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
-        </div>
+<!--        </div>-->
     </main>
     <main id="about" class="about">
         <h4>A Little Bit About Me</h4>
