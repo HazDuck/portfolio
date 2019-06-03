@@ -57,10 +57,10 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-text"><p>Bond Fight</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">A team project to compare Bond films. We built an API using Node with a MongoDB database that makes calls using React. (The first Github repo is the front-end and the second is the back-end).</p>
+                        <p class="brand">A team project to compare Bond films. We built an API using Node with a MongoDB database that makes calls using React. (The below link will open both repositories).</p>
                     </div>
-                    <a href="https://github.com/Mayden-Academy/2019-react-bond-fight" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code2"></a>
-                    <a href="https://github.com/Mayden-Academy/2019-nodeApi-bondFight" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                    <a href="#" onclick="window.open('https://github.com/Mayden-Academy/2019-react-bond-fight');
+    window.open('https://github.com/Mayden-Academy/2019-nodeApi-bondFight');"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
