@@ -53,17 +53,6 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
         <h4 class="brand">My Projects</h4>
         <div class="port-container">
             <div class="port-area">
-                <div class="port-pic port10"></div>
-                <div class="port-text"><p>Bond Fight</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand">A team project to compare Bond films. We built an API using Node with a MongoDB database that makes calls using React. (The below link will open both repositories).</p>
-                    </div>
-                    <a href="#" onclick="window.open('https://github.com/Mayden-Academy/2019-react-bond-fight');
-    window.open('https://github.com/Mayden-Academy/2019-nodeApi-bondFight');"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
-                </div>
-            </div>
-            <div class="port-area">
                 <div class="port-pic port9"></div>
                 <div class="port-text"><p>Top Dog</p></div>
                 <div class="port-links">
@@ -72,6 +61,17 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/projects/2019Feb/2019-nmr-TopDog/" target="_blank"><button class="demo">Demo</button>
                         <a href="https://github.com/Mayden-Academy/2019-nmr-TopDog" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
+                <div class="port-pic port10"></div>
+                <div class="port-text"><p>Bond Fight</p></div>
+                <div class="port-links">
+                    <div class="description">
+                        <p class="brand">A team project to compare Bond films. We built an API using Node with a MongoDB database that makes calls using React. (The below link will open both repositories).</p>
+                    </div>
+                    <a href="#" onclick="window.open('https://github.com/Mayden-Academy/2019-react-bond-fight');
+    window.open('https://github.com/Mayden-Academy/2019-nodeApi-bondFight');"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
                 </div>
             </div>
             <div class="port-area">
@@ -90,7 +90,7 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                 <div class="port-text"><p>Responsive Web Design</p></div>
                 <div class="port-links">
                     <div class="description">
-                        <p class="brand">I recreated a website using responsive web design. Product information is pulled from a JSON file and templated using Handlebars.js</p>
+                        <p class="brand">I recreated a website using responsive web design. Product information templated using Handlebars.js</p>
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/pilotupdate/gulppilot/" target="_blank"><button class="demo">Demo</button></a>
                     <a href="https://github.com/HazDuck/pilotshop" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
