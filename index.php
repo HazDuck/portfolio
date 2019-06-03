@@ -54,6 +54,17 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
         <div class="port-container">
             <div class="port-area">
                 <div class="port-pic port1"></div>
+                <div class="port-text"><p>Bond Fight</p></div>
+                <div class="port-links">
+                    <div class="description">
+                        <p class="brand">A team project to compare Bond films - we built an API using Node with a MongoDB database that makes calls using React. (The first Github repo is the front-end and the second is the back-end).</p>
+                    </div>
+                    <a href="https://github.com/Mayden-Academy/2019-react-bond-fight" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code2"></a>
+                    <a href="https://github.com/Mayden-Academy/2019-nodeApi-bondFight" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
+                </div>
+            </div>
+            <div class="port-area">
+                <div class="port-pic port1"></div>
                 <div class="port-text"><p>Responsive Web Design</p></div>
                 <div class="port-links">
                     <div class="description">
@@ -115,26 +126,6 @@ $showAboutMeInfo = printAboutMeInfo($aboutMeInfo);
                     </div>
                     <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/solar" target="_blank"><button class="demo">Demo</button>
                     <a href="https://github.com/HazDuck/solarSystem" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
-                </div>
-            </div>
-            <div class="port-area">
-                <div class="port-pic port6"></div>
-                <div class="port-text"><p>Post and Rails</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand">Using PHP I created a one page application to display the length of a fence based on the materials available.</p>
-                    </div>
-                    <a href="http://dev.maydenacademy.co.uk/students/2019/feb/pete/postmaster3000" target="_blank"><button class="demo">Demo</button>
-                        <a href="https://github.com/HazDuck/postmaster3000" target="_blank"><img src="img/github-blue.svg" alt="github link" class="link-to-code"></a>
-                </div>
-            </div>
-            <div class="port-area">
-                <div class="port-pic port8"></div>
-                <div class="port-text"><p>Coming Soon...</p></div>
-                <div class="port-links">
-                    <div class="description">
-                        <p class="brand"></p>
-                    </div>
                 </div>
             </div>
             <div class="port-area">
