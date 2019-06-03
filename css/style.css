@@ -139,7 +139,7 @@ a img {
 
 .port-area {
     width: 33.3%;
-    float: left;
+    float: right;
     margin-bottom: 50px;
 }
 
@@ -212,14 +212,12 @@ a img {
 
 .port10 {
     background-image: url("../img/bond.png");
-    /*background-color: #FA255E;*/
     background-size: cover;
     background-position: center;
 }
 
 .port11 {
     background-image: url("../img/milk.png");
-    /*background-color: #FA255E;*/
     background-size: cover;
     background-position: center;
 }
